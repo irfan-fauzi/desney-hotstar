@@ -11,24 +11,23 @@ const BannerCarousel = ({ nowPlaying }) => {
   return (
     <div>
       <Carousel 
-        
+        autoPlay
         infiniteLoop
         showStatus={false}
         showIndicators={false}
         showThumbs={false}
         interval={9000}
         >
-      
       {
          movieNowPlaying.map(el => (
-           <div className='flex flex-row-reverse relative lg:after:content-["satu"] lg:after:bg-gradient lg:after:absolute lg:after:top-0 lg:after:left-0 lg:after:h-full lg:after:w-full'>
+           <div className='flex flex-row-reverse relative lg:after:content-["satu"] lg:after:bg-gradient lg:after:absolute lg:after:top-0 lg:after:left-0 lg:after:h-full lg:after:w-full lg:h-[25rem] '>
              <div className='lg:after:hidden lg:w-7/12 w-full after:content-[""] relative after:absolute after:w-full after:bg-black after:bottom-0 after:left-0 after:h-[3rem] after:opacity-70'>
               <img src={CONFIG.BASE_IMAGE_URL + el.backdrop_path} alt="" />
               <p className='lg:hidden absolute text-gray-300 bottom-[0.5rem] z-10 left-0 right-0 font-bold'>{el.original_title}</p>
              </div>
             <div className='lg:w-5/12 hidden text-white relative z-10 lg:flex items-center '>
               <div className='px-10'>
-                <h1 className='text-3xl text-left font-bold'>{el.original_title}</h1>
+                <h1 className='text-4xl text-left font-bold'>{el.original_title}</h1>
                 <Gap className='h-3' />
                 <p className='text-left text-gray-400 font-semibold'>Release date : {el.release_date}</p>
                 <Gap className='h-3' />

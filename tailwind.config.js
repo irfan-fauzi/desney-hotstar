@@ -24,7 +24,7 @@ module.exports = {
     plugin(({ addUtilities }) => {
       const utilities = {
         '.bg-gradient': {
-          background: `linear-gradient(90deg, #111827 43.6%, rgba(17, 24, 39, 0) 93.35%)
+          background: `linear-gradient(90deg, #030B17 43.6%, rgba(17, 24, 39, 0) 93.35%)
           `
         },
         '.text-overflow' : {

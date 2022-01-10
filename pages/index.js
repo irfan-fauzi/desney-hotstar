@@ -1,13 +1,20 @@
 import Image from 'next/image'
-import { BannerCarousel } from '../components'
+import Head from 'next/head'
+import { BannerCarousel, Header } from '../components'
 import API_ENDPOINT from '../utils/config/api-endpoint'
 
 export default function Home(props) {
   
   return (
-    <div className='min-h-screen bg-gray-900'>
-      <BannerCarousel nowPlaying={props.nowPlaying} />
-    </div>
+    <>
+      <Head>
+        <title>Desney clone</title>
+      </Head>
+      <div className='min-h-screen bg-gray-900'>
+        <Header />
+        <BannerCarousel nowPlaying={props.nowPlaying} />
+      </div>
+    </>
   )
 }
 
