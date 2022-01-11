@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import { BannerCarousel, Header, NowPlaying, Upcoming } from '../components'
+import { Action, BannerCarousel, Family, Header, NowPlaying, Upcoming } from '../components'
 import API_ENDPOINT from '../utils/config/api-endpoint'
 
 export default function Home(props) {
@@ -15,6 +15,7 @@ export default function Home(props) {
         <BannerCarousel nowPlaying={props.nowPlaying} />
         <NowPlaying nowPlaying={props.nowPlaying} />
         <Upcoming upComing={props.upComing}/>
+        <Family />
       </div>
     </>
   )

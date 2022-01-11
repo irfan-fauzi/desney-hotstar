@@ -5,7 +5,11 @@ import { Gap } from '../..'
 import CONFIG from '../../../utils/config/config'
 
 
-const ListCarouselMovie = ({ movieListFirst, movieListSecond }) => {
+const ListCarouselMovie = ({ movies }) => {
+  const myMovie = movies
+  const movieListFirst = myMovie.filter(el => movies.indexOf(el) < 10)
+  const movieListSecond = movies.filter(el => movies.indexOf(el) > 9 )
+  
   return (
     <Carousel>
       <div className='grid grid-cols-10 gap-2'>
