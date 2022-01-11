@@ -1,6 +1,6 @@
-import Image from 'next/image'
+
 import Head from 'next/head'
-import { BannerCarousel, Header } from '../components'
+import { BannerCarousel, Header, NowPlaying } from '../components'
 import API_ENDPOINT from '../utils/config/api-endpoint'
 
 export default function Home(props) {
@@ -13,6 +13,7 @@ export default function Home(props) {
       <div className='min-h-screen bg-gray-900'>
         <Header />
         <BannerCarousel nowPlaying={props.nowPlaying} />
+        <NowPlaying nowPlaying={props.nowPlaying} />
         
       </div>
     </>

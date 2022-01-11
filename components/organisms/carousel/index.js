@@ -20,7 +20,7 @@ const BannerCarousel = ({ nowPlaying }) => {
         >
       {
          movieNowPlaying.map(el => (
-           <div className='flex flex-row-reverse relative lg:after:content-["satu"] lg:after:bg-gradient lg:after:absolute lg:after:top-0 lg:after:left-0 lg:after:h-full lg:after:w-full lg:h-[25rem] '>
+           <div key={el.id} className='flex flex-row-reverse relative lg:after:content-["satu"] lg:after:bg-gradient lg:after:absolute lg:after:top-0 lg:after:left-0 lg:after:h-full lg:after:w-full '>
              <div className='lg:after:hidden lg:w-7/12 w-full after:content-[""] relative after:absolute after:w-full after:bg-black after:bottom-0 after:left-0 after:h-[3rem] after:opacity-70'>
               <img src={CONFIG.BASE_IMAGE_URL + el.backdrop_path} alt="" />
               <p className='lg:hidden absolute text-gray-300 bottom-[0.5rem] z-10 left-0 right-0 font-bold'>{el.original_title}</p>
