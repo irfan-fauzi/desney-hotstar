@@ -11,7 +11,7 @@ const Header = () => {
           <div className='w-1/12 '>
             <Image src="/assets/images/logo.svg" width={100} height={50} alt='logo' />
           </div>
-          <div className='w-5/12 font-semibold'>
+          <div className='w-5/12 font-semibold '>
             <ul className='flex gap-10'>
               <li>Series</li>
               <li>Movies</li>

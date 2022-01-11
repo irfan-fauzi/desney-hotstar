@@ -13,6 +13,7 @@ export default function Home(props) {
       <div className='min-h-screen bg-gray-900'>
         <Header />
         <BannerCarousel nowPlaying={props.nowPlaying} />
+        
       </div>
     </>
   )
