@@ -10,7 +10,7 @@ const NowPlaying = (props) => {
   const movieListFirst = movies.filter(el => movies.indexOf(el) < 10)
   const movieListSecond = movies.filter(el => movies.indexOf(el) > 9 )
   return (
-    <section>
+    <section className=''>
       <article>
         <Gap className='h-3' />
         <p className='text-white text-lg ml-10 font-semibold'>Top Picks For You :</p>

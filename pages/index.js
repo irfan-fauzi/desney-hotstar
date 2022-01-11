@@ -14,7 +14,7 @@ export default function Home(props) {
         <Header />
         <BannerCarousel nowPlaying={props.nowPlaying} />
         <NowPlaying nowPlaying={props.nowPlaying} />
-        <Upcoming />
+        <Upcoming upComing={props.upComing}/>
       </div>
     </>
   )
