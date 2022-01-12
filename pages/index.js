@@ -22,6 +22,11 @@ export default function Home(props) {
 export const getStaticProps = async () => {
   const nowPlaying = await fetchNowPlaying()
   const upComing = await fetchUpcoming()
+  if(!nowPlaying || !Upcoming){
+    return {
+      notFound: true
+    }
+  }
   return {
     props : {
        nowPlaying,

@@ -7,7 +7,7 @@ const fetchNowPlaying = async () => {
     const resJson = await res.json()
     return resJson
   } catch (error) {
-    console.log(`ada masalah now playing ${error}`)
+    return `trouble when fetch data nowplaying movies : ${error}`
   }
 }
 
@@ -17,7 +17,7 @@ const fetchUpcoming = async () => {
     const resJson = await res.json()
     return resJson
   } catch (error) {
-    console.log(`ada masalah fetch upcoming : ${error}`)
+    return `trouble when fetch data upcoming movies : ${error}`
   }
 }
 
