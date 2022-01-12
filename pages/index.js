@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import { Action, BannerCarousel, Family, Header, NowPlaying, Upcoming } from '../components'
+import { Action, BannerCarousel, Family, Header, Layout, NowPlaying, Upcoming } from '../components'
 import API_ENDPOINT from '../utils/config/api-endpoint'
 
 export default function Home(props) {
@@ -10,13 +10,13 @@ export default function Home(props) {
       <Head>
         <title>Desney clone</title>
       </Head>
-      <div className='min-h-screen bg-gray-900'>
+      <Layout>
         <Header />
         <BannerCarousel nowPlaying={props.nowPlaying} />
         <NowPlaying nowPlaying={props.nowPlaying} />
         <Upcoming upComing={props.upComing}/>
         <Family />
-      </div>
+      </Layout>
     </>
   )
 }

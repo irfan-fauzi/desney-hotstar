@@ -1,8 +1,6 @@
-import Image from 'next/image'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
-import { Gap, MoviesThumbnail } from '../..'
-import CONFIG from '../../../utils/config/config'
+import { MoviesThumbnail } from '../..'
 
 
 const ListCarouselMovie = ({ movies }) => {
