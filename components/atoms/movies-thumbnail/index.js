@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import CONFIG from "../../../utils/config/config"
+
 
 const MoviesThumbnail = ({movie}) => {
   return (
