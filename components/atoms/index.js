@@ -1,2 +1,3 @@
 import Gap from './gap'
-export { Gap }
+import MoviesThumbnail from './movies-thumbnail'
+export { Gap, MoviesThumbnail }
