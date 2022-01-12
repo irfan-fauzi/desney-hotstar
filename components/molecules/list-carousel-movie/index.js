@@ -7,9 +7,13 @@ const ListCarouselMovie = ({ movies }) => {
   const myMovie = movies
   const movieListFirst = myMovie.filter(el => movies.indexOf(el) < 10)
   const movieListSecond = movies.filter(el => movies.indexOf(el) > 9 )
-  
+
   return (
-    <Carousel>
+    <Carousel
+      showStatus={false}
+      showIndicators={false}
+      showThumbs={false}
+    >
       <div className='grid grid-cols-10 gap-2'>
          {movieListFirst.map(movie => (
             <MoviesThumbnail key={movie.id} movie={movie} />
@@ -20,6 +24,8 @@ const ListCarouselMovie = ({ movies }) => {
             <MoviesThumbnail key={movie.id} movie={movie} />
           ))}
       </div>
+      
+      
     </Carousel>
   )
 }

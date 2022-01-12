@@ -26,7 +26,7 @@ const Family = () => {
   },[])
 
   return (
-    <section className='mt-[-1.5rem]'>
+    <section>
       <article>
         <Gap className='h-3' />
         <p className='text-white text-lg ml-10 font-semibold'>Family :</p>

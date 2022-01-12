@@ -3,7 +3,7 @@ import { SectionMovie } from '..'
 const Upcoming = ({ upComing }) => {
   
   return (
-    <section className='mt-[-1.5rem]'>
+    <section>
       <SectionMovie movies={upComing} title='upcoming' />
     </section>
   )

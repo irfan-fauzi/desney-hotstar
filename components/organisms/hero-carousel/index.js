@@ -15,7 +15,6 @@ const BannerCarousel = ({ nowPlaying }) => {
         showIndicators={false}
         showThumbs={false}
         interval={9000}
-        showThumbs={false}
         >
       {
          movieNowPlaying.map(movie => (
