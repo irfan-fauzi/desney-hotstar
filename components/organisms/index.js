@@ -1,4 +1,4 @@
-import BannerCarousel from './carousel'
+import BannerCarousel from './hero-carousel'
 import Header from './header'
 import SectionMovie from './section-movie'
 import NowPlaying from './now-playing'
