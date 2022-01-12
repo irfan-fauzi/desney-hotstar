@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Gap } from "../../.."
+import { Gap, ListCarouselMovie } from "../../.."
 import API_ENDPOINT from "../../../../utils/config/api-endpoint"
 
 
@@ -26,12 +26,12 @@ const Family = () => {
   },[])
 
   return (
-    <section className=''>
+    <section className='mt-[-1.5rem]'>
       <article>
         <Gap className='h-3' />
-        <p className='text-white text-lg ml-10 font-semibold'>Top Picks For You :</p>
+        <p className='text-white text-lg ml-10 font-semibold'>Family :</p>
         <Gap className='h-5' />
-        
+        <ListCarouselMovie movies={movies} />
       </article>
     </section>
   )
