@@ -1,17 +1,10 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Gap, ListCarouselMovie } from '../..'
+import { SectionMovie } from '..'
 
-
-const NowPlaying = (props) => {
+const NowPlaying = ({ nowPlaying }) => {
   
   return (
     <section>
-      <article>
-        <Gap className='h-3' />
-        <p className='text-white text-lg ml-10 font-semibold'>Top Picks For You :</p>
-        <Gap className='h-5' />
-        <ListCarouselMovie movies={props.nowPlaying.results} />
-      </article>
+      <SectionMovie movies={nowPlaying} title='Now playing' />
     </section>
   )
 }

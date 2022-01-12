@@ -11,7 +11,6 @@ export default function Home(props) {
         <title>Desney clone</title>
       </Head>
       <Layout>
-        <Header />
         <BannerCarousel nowPlaying={props.nowPlaying} />
         <NowPlaying nowPlaying={props.nowPlaying} />
         <Upcoming upComing={props.upComing}/>
