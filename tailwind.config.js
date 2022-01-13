@@ -27,6 +27,9 @@ module.exports = {
           background: `linear-gradient(90deg, #030B17 43.6%, rgba(17, 24, 39, 0) 93.35%)
           `
         },
+        '.bg-gradient-mobile' : {
+          background: `linear-gradient(0deg, #030B17 14.88%, rgba(5, 13, 26, 0.825377) 43.54%, rgba(7, 15, 28, 0.70314) 60%, rgba(17, 24, 39, 0) 154.56%)`
+        },
         '.text-overflow' : {
           overflow : `hidden`,
           textOverflow : `ellipsis`,
