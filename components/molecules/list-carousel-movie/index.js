@@ -14,12 +14,12 @@ const ListCarouselMovie = ({ movies }) => {
       showIndicators={false}
       showThumbs={false}
     >
-      <div className='grid grid-cols-10 gap-2'>
+      <div className='grid lg:grid-cols-10 md:grid-cols-4 grid-cols-3 gap-2'>
          {movieListFirst.map(movie => (
             <MoviesThumbnail key={movie.id} movie={movie} />
           ))}
       </div>
-      <div className='grid grid-cols-10 gap-2'>
+      <div className='grid lg:grid-cols-10 md:grid-cols-4 grid-cols-3 gap-2'>
           {movieListSecond.map(movie => (
             <MoviesThumbnail key={movie.id} movie={movie} />
           ))}
