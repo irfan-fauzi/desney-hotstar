@@ -32,6 +32,7 @@ const Family = () => {
         <p className='text-white lg:text-lg lg:ml-10 ml-2 font-semibold'>Family :</p>
         <Gap className='h-5' />
         <ListCarouselMovie movies={movies} />
+        <Gap className='h-10' />
       </article>
     </section>
   )
