@@ -18,7 +18,7 @@ const BannerCarousel = ({ nowPlaying }) => {
         >
       {
          movieNowPlaying.map(movie => (
-           <div className=''>
+           <div>
               <ItemCarouselHero key={movie.id} movie={movie} />
               <article className='block lg:hidden bg-gradient-mobile px-2 py-4 w-full'>
                 <p className='text-white text-xl font-semibold text-center'>{movie.original_title}</p>
