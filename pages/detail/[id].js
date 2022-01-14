@@ -1,6 +1,3 @@
-import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
-import API_ENDPOINT from "../../utils/config/api-endpoint"
 import { fetchAllMovies, fetchDetail } from "../../utils/fetch-ssr"
 
 
