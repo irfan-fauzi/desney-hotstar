@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import { Gap } from "../../.."
 
 const CaptionPart = ({movie}) => {
   return (
-    <div className='lg:w-5/12 hidden text-white relative z-10 lg:flex items-center '>
+    <div className='lg:w-5/12 hidden text-white relative z-10 lg:flex items-center'>
       <div className='px-10'>
         <h1 className='text-4xl text-left font-bold'>{movie.original_title}</h1>
         <Gap className='h-3' />
