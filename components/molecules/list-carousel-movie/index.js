@@ -1,6 +1,8 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Image from 'next/image'
 import Slider from 'react-slick'
 import { MoviesThumbnail } from '../..'
+import CONFIG from '../../../utils/config/config'
 
 
 const ListCarouselMovie = ({ movies }) => {
@@ -9,25 +11,29 @@ const ListCarouselMovie = ({ movies }) => {
   const movieListSecond = movies.filter(el => movies.indexOf(el) > 9 )
 
   const sliderSettings = {
-    slidesToShow: 3,
-    slidesToScroll: 8,
-    infinite: false,
+    dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3
   }
   return (
     <Slider {...sliderSettings}>
-      {movieListFirst.map(movie => (
-        <MoviesThumbnail key={movie.id} movie={movie} />
-      ))}
-      {/* <div className='grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-2'>
-         {movieListFirst.map(movie => (
-            <MoviesThumbnail key={movie.id} movie={movie} />
-          ))}
+      <div>
+        <p>1</p>
       </div>
-      <div className='grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-2'>
-          {movieListSecond.map(movie => (
-            <MoviesThumbnail key={movie.id} movie={movie} />
-          ))}
-      </div> */}
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>1</p>
+      </div>
 
     </Slider>
   )
