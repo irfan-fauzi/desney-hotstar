@@ -11,11 +11,13 @@ const ListCarouselMovie = ({ movies }) => {
   const movieListSecond = movies.filter(el => movies.indexOf(el) > 9 )
 
   const sliderSettings = {
-    dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3
+    centerMode: true,
+			infinite: true,
+			centerPadding: "60px",
+			slidesToShow: 3,
+			speed: 500,
+			rows: 2,
+			slidesPerRow: 2
   }
   return (
     <Slider {...sliderSettings}>
