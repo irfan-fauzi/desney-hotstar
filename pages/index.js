@@ -1,18 +1,19 @@
 import Head from 'next/head'
-import { fetchNowPlaying, fetchUpcoming } from '../utils/fetch-ssr'
+import { fetchGenre, fetchNowPlaying, fetchUpcoming } from '../utils/fetch-ssr'
 import { BannerCarousel, Family, Layout, NowPlaying, Upcoming } from '../components'
 
 
-export default function Home(props) {  
+export default function Home({nowPlaying, upComing}) {
+    
   return (
     <>
       <Head>
         <title>Desney clone</title>
       </Head>
       <Layout>
-        <BannerCarousel nowPlaying={props.nowPlaying} />
-        <NowPlaying nowPlaying={props.nowPlaying} />
-        <Upcoming upComing={props.upComing}/>
+        <BannerCarousel nowPlaying={nowPlaying} />
+        <NowPlaying nowPlaying={nowPlaying} />
+        <Upcoming upComing={upComing}/>
         <Family />
       </Layout>
     </>
@@ -21,7 +22,7 @@ export default function Home(props) {
 
 export const getStaticProps = async () => {
   const nowPlaying = await fetchNowPlaying()
-  const upComing = await fetchUpcoming()
+  const upComing = await fetchGenre(12)
   if(!nowPlaying || !Upcoming){
     return {
       notFound: true

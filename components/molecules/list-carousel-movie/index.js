@@ -1,36 +1,47 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel } from 'react-responsive-carousel'
-import { MoviesThumbnail } from '../..'
+import Slider from 'react-slick'
+import { MoviesThumbnail, NextArrow, PrevArrow } from '../..'
 
 
 const ListCarouselMovie = ({ movies }) => {
-  const myMovie = movies
-  const movieListFirst = myMovie.filter(el => movies.indexOf(el) < 10)
-  const movieListSecond = movies.filter(el => movies.indexOf(el) > 9 )
-
-  return (
-    <Carousel
-      showStatus={false}
-      showIndicators={false}
-      showThumbs={false}
-      emulateTouch={false}
-      swipeScrollTolerance={100}
-    >
-      
-      <div className='grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-2'>
-         {movieListFirst.map(movie => (
-            <MoviesThumbnail key={movie.id} movie={movie} />
-          ))}
-      </div>
-      <div className='grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-2'>
-          {movieListSecond.map(movie => (
-            <MoviesThumbnail key={movie.id} movie={movie} />
-          ))}
-      </div>
+  const myMovie = [...movies]
+  const settingsLists = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 10,
+    slidesToScroll: 3,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      }
+    ] 
+  }
   
-      
-      
-    </Carousel>
+  return (
+    <Slider {...settingsLists}>
+      {
+        myMovie.map(movie => (
+          <MoviesThumbnail movie={movie} key={movie.id}/>
+        ))
+      }
+    </Slider>
+  
+    
+    
   )
 }
 

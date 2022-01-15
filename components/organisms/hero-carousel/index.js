@@ -25,12 +25,12 @@ const BannerCarousel = ({ nowPlaying }) => {
               <ItemCarouselHero  movie={movie} />
               <Link href={`/detail/${movie.id}`} >
                 <a>
-                  <article className='block lg:hidden bg-gradient-mobile px-2 py-4 w-full'>
-                    <p className='text-white text-xl font-semibold text-center'>{movie.original_title}</p>        
-                    <p className='truncate text-ellipsis text-clip  font-light text-white'>{movie.overview}</p>
-                    <Gap className='h-3' />
-                    <button className='text-gray-100 rounded-md px-4 py-2 text-left bg-red-700'>watch now</button>
-                    <Gap className='h-3' />
+                  <article className='block lg:hidden  px-2 py-4 w-full'>
+                    <Gap className='h-2' />
+                    <p className='text-blue-400 text-2xl font-semibold text-left w-9/12'>{movie.original_title}</p>
+                    <Gap className='h-2' />        
+                    <p className='line-clamp-3 font-light text-blue-200 text-left'>{movie.overview}</p>
+                    
                   </article>
                 </a>
               </Link>

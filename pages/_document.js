@@ -15,7 +15,7 @@ class MyDocument extends Document {
         <meta name="description" content="Artificial Intellegent" />
         <meta name="keywords" content="Artificial Intellegent" />
         <meta name="author" content="Irfan fauzi" />
-        
+       
         </Head>
         <body>
           <Main />

@@ -1,5 +1,10 @@
 import API_ENDPOINT from "../config/api-endpoint"
 
+const fetchGenre = async (id) => {
+  const res = await fetch(API_ENDPOINT.GENRES(id))
+  const resJson = await res.json()
+  return resJson
+}
 
 const fetchNowPlaying = async () => {
   try {
@@ -41,4 +46,4 @@ const fetchUpcoming = async () => {
   }
 }
 
-export { fetchNowPlaying, fetchUpcoming, fetchDetail, fetchAllMovies }
+export { fetchNowPlaying, fetchUpcoming, fetchDetail, fetchAllMovies, fetchGenre }

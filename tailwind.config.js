@@ -30,6 +30,14 @@ module.exports = {
         '.bg-gradient-mobile' : {
           background: `linear-gradient(0deg, #030B17 14.88%, rgba(5, 13, 26, 0.825377) 43.54%, rgba(7, 15, 28, 0.70314) 60%, rgba(17, 24, 39, 0) 154.56%)`
         },
+        '.bg-gradient-slider-right' : {
+          background: `linear-gradient(270.37deg, #111827 15.03%, rgba(17, 24, 39, 0.985208) 21.58%, rgba(17, 24, 39, 0.968455) 28.94%, rgba(17, 24, 39, 0.946916) 34.57%, rgba(17, 24, 39, 0.914882) 40.09%, rgba(17, 24, 39, 0.873696) 45.15%, rgba(17, 24, 39, 0.80694) 52.39%, rgba(17, 24, 39, 0.742966) 56.88%, rgba(17, 24, 39, 0.696536) 60.19%, rgba(17, 24, 39, 0) 105.05%)`
+        },
+        '.bg-gradient-slider-left' : {
+          background: `linear-gradient(90deg, #111827 13.13%, rgba(17, 24, 39, 0.985208) 18.98%, rgba(17, 24, 39, 0.968455) 25.54%, rgba(17, 24, 39, 0.946916) 30.57%, rgba(17, 24, 39, 0.914882) 35.49%, rgba(17, 24, 39, 0.873696) 40.01%, rgba(17, 24, 39, 0.80694) 46.47%, rgba(17, 24, 39, 0.742966) 50.47%, rgba(17, 24, 39, 0.696536) 53.43%, rgba(17, 24, 39, 0) 93.45%)`
+        },
+
+
         '.text-overflow' : {
           overflow : `hidden`,
           textOverflow : `ellipsis`,
@@ -37,15 +45,11 @@ module.exports = {
           lineClamp : `4`,
           boxOrient : `vertical`
         },
-        '.grid-blog': {
-          gridTemplateColumns: `repeat(auto-fit, minmax(360px, 1fr))`
-        },
+       
         '.grid-footer': {
           gridTemplateColumns: `repeat(auto-fit, minmax(340px, 1fr))`
         },
-        '.grid-row-blog': {
-          gridRow : `1/3`
-        },
+        
         '.container-image': {
           width: `100%`,
           'div' : {
@@ -61,6 +65,7 @@ module.exports = {
         
       }
       addUtilities(utilities)
-    })
+    }),
+    require('@tailwindcss/line-clamp')
   ],
 }
