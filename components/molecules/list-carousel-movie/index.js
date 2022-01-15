@@ -13,7 +13,8 @@ const ListCarouselMovie = ({ movies }) => {
       showStatus={false}
       showIndicators={false}
       showThumbs={false}
-      autoFocus
+      emulateTouch={false}
+      swipeScrollTolerance={100}
     >
       
       <div className='grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-2'>
