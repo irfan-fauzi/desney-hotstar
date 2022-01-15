@@ -1,34 +1,8 @@
-
-import Image from 'next/image'
 import Slider from 'react-slick'
-import { MoviesThumbnail } from '../..'
-import CONFIG from '../../../utils/config/config'
-
-const NextArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div
-      className='border block w-7 h-full cursor-pointer absolute right-0 z-10 top-0'
-      onClick={onClick}
-    >s</div>
-  );
-  
-}
-
- 
-const PrevArrow = (props) => {
-  const {onClick} = props
-  return (
-  <div
-      className='border block w-7 h-full cursor-pointer absolute left-0 z-10 top-0'
-      onClick={onClick}
-    >s</div>
-  )
-}
-
+import { MoviesThumbnail, NextArrow, PrevArrow } from '../..'
 const ListCarouselMovie = ({ movies }) => {
   const myMovie = [...movies]
-  const settings = {
+  const settingsLists = {
     dots: false,
     infinite: false,
     speed: 500,
@@ -57,10 +31,10 @@ const ListCarouselMovie = ({ movies }) => {
   }
   return (
     
-    <Slider {...settings}>
+    <Slider {...settingsLists}>
       {
         myMovie.map(movie => (
-          <MoviesThumbnail movie={movie} />
+          <MoviesThumbnail movie={movie} key={movie.id}/>
         ))
       }
     </Slider>

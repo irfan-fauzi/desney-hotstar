@@ -33,7 +33,7 @@ const fetchDetail = async (id) => {
 
 const fetchUpcoming = async () => {
   try {
-    const res = await fetch(API_ENDPOINT.UPCOMING)
+    const res = await fetch(API_ENDPOINT.GENRES(10770))
     const resJson = await res.json()
     return resJson
   } catch (error) {
