@@ -5,7 +5,7 @@ import CONFIG from "../../../utils/config/config"
 
 const MoviesThumbnail = ({movie}) => {
   return (
-    <div>
+    <div className='px-1'>
       <div className='container-image'>
         <Link href={`/detail/${movie.id}`}>
           <a>
