@@ -4,7 +4,7 @@ const Upcoming = ({ upComing }) => {
   
   return (
     <section>
-      <SectionMovie movies={upComing} title='upcoming TV movies' />
+      <SectionMovie movies={upComing} title='most favorite box-office' />
     </section>
   )
 }
