@@ -13,7 +13,7 @@ const ListCarouselMovie = ({ movies }) => {
       showStatus={false}
       showIndicators={false}
       showThumbs={false}
-      
+      autoFocus
     >
       
       <div className='grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-2'>
