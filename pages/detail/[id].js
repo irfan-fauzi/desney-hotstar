@@ -1,36 +1,17 @@
-import { fetchAllMovies, fetchDetail } from "../../utils/fetch-ssr"
+import { fetchDetail } from "../../utils/fetch-ssr"
 
-
-export const getStaticPaths = async () => {
-  const resjson = await fetchAllMovies()
-  const arrayMovies = resjson.results
-  const paths = arrayMovies.map(movie => {
-    return {
-      params: { id: movie.id.toString() }
-    }
-  })
-
+export async function getServerSideProps({params}) {
+  const reqDetail = await fetchDetail(params.id)
   return {
-    paths,
-    fallback: false
+    props: {reqDetail}
   }
 }
 
-export const getStaticProps = async (context) => {
-  const id = context.params.id
-  const movie = await fetchDetail(id)
-  return {
-    props : {
-      movie
-    }
-  }
-}
-
-const Detail = ({ movie }) => {  
-
+const Detail = ({reqDetail}) => {  
+  
   return (
     <div>
-      <p>{movie.title}</p>
+      <p>{reqDetail.title}</p>
     </div>
   )
 }
