@@ -1,10 +1,14 @@
 import Image from 'next/image'
-import API_ENDPOINT from '../../utils/config/api-endpoint'
 import CONFIG from '../../utils/config/config'
 import { fetchDetail } from "../../utils/fetch-ssr"
 
 export async function getServerSideProps({params}) {
   const reqDetail = await fetchDetail(params.id)
+  if(reqDetail.success == false) {
+    return {
+      notFound: true
+    }
+  }
   return {
     props: {reqDetail}
   }

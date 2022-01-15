@@ -13,7 +13,9 @@ const ListCarouselMovie = ({ movies }) => {
       showStatus={false}
       showIndicators={false}
       showThumbs={false}
+      
     >
+      
       <div className='grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-2'>
          {movieListFirst.map(movie => (
             <MoviesThumbnail key={movie.id} movie={movie} />
@@ -24,6 +26,7 @@ const ListCarouselMovie = ({ movies }) => {
             <MoviesThumbnail key={movie.id} movie={movie} />
           ))}
       </div>
+  
       
       
     </Carousel>
