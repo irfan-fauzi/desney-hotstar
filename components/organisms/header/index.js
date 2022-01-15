@@ -3,7 +3,7 @@ import { MainLogo, ListMenuHeader, ListLoginHeader } from '../../'
 const Header = () => {
   return (
     <div>
-      <nav className='lg:px-10 px-2 py-2 text-gray-300 text-[1.1rem]'>
+      <nav className='lg:px-10 px-1 py-2 text-gray-300 text-[1.1rem]'>
         <div className="flex items-center gap-3 ">
           <div className='lg:w-1/12'>
             <MainLogo />

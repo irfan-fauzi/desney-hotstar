@@ -45,15 +45,11 @@ module.exports = {
           lineClamp : `4`,
           boxOrient : `vertical`
         },
-        '.grid-blog': {
-          gridTemplateColumns: `repeat(auto-fit, minmax(360px, 1fr))`
-        },
+       
         '.grid-footer': {
           gridTemplateColumns: `repeat(auto-fit, minmax(340px, 1fr))`
         },
-        '.grid-row-blog': {
-          gridRow : `1/3`
-        },
+        
         '.container-image': {
           width: `100%`,
           'div' : {
@@ -69,6 +65,7 @@ module.exports = {
         
       }
       addUtilities(utilities)
-    })
+    }),
+    require('@tailwindcss/line-clamp')
   ],
 }
