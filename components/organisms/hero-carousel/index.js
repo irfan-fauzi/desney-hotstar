@@ -12,10 +12,13 @@ const BannerCarousel = ({ nowPlaying }) => {
   const settingsLists = {
     
     dots: false,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 800,
+      autoplaySpeed: 4000,
+      cssEase: "ease-in",
     prevArrow: <PrevArrowHero />,
     nextArrow: <NextArrowHero />,
     
@@ -39,7 +42,7 @@ const BannerCarousel = ({ nowPlaying }) => {
                     <p className='text-white text-2xl font-bold text-left'>{movie.original_title}</p>
                     <Gap className='h-1' />
                     <p className='text-left text-gray-400 font-bold text-lg'>{movie.release_date.slice(0, 4)}</p>
-                    <Gap className='h-1' />        
+                    <Gap className='h-4' />        
                     <div className='border-b border-gray-600'></div>
                   </article>
                 </a>
