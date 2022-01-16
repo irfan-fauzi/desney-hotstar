@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { fetchGenre, fetchNowPlaying, fetchUpcoming } from '../utils/fetch-ssr'
-import { BannerCarousel, Family, Layout, NowPlaying, Upcoming } from '../components'
+import { BannerCarousel, Layout, NowPlaying, Upcoming } from '../components'
 
 export default function Home({nowPlaying, upComing}) {
     
@@ -13,7 +13,7 @@ export default function Home({nowPlaying, upComing}) {
         <BannerCarousel nowPlaying={nowPlaying} />
         <NowPlaying nowPlaying={nowPlaying} />
         <Upcoming upComing={upComing}/>
-        <Family />
+        
       </Layout>
     </>
   )

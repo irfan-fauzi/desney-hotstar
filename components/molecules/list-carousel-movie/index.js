@@ -7,9 +7,9 @@ const ListCarouselMovie = ({ movies }) => {
   const settingsLists = {
     dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 10,
-    slidesToScroll: 3,
+    speed: 700,
+    slidesToShow: 8,
+    slidesToScroll: 5,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     responsive: [
