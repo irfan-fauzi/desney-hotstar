@@ -22,15 +22,17 @@ const BannerCarousel = ({ nowPlaying }) => {
       {
          movieNowPlaying.map(movie => (
 
-           <div key={movie.id}>
+           <div key={movie.id} className='border'>
               <ItemCarouselHero  movie={movie} />
               <Link href={`/detail/${movie.id}`} >
                 <a>
-                  <article className='block lg:hidden  px-2 py-4 w-full'>
+                  <article className='block lg:hidden px-2 w-full'>
+                    <Gap className='h-5' />
+                    <p className='text-blue-400 text-2xl font-bold text-left w-9/12'>{movie.original_title}</p>
                     <Gap className='h-2' />
-                    <p className='text-blue-400 text-2xl font-semibold text-left w-9/12'>{movie.original_title}</p>
+                    <p className='text-left text-gray-400 font-bold text-lg'>{movie.release_date.slice(0, 4)}</p>
                     <Gap className='h-2' />        
-                    <p className='line-clamp-3 font-light text-blue-200 text-left'>{movie.overview}</p>
+                    <p className='line-clamp-3 font-light text-blue-200 text-left w-10/12'>{movie.overview}</p>
                     
                   </article>
                 </a>

@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import { fetchGenre, fetchNowPlaying, fetchUpcoming } from '../utils/fetch-ssr'
-import { BannerCarousel, Layout, NowPlaying, Upcoming } from '../components'
+import { fetchGenre, fetchNowPlaying } from '../utils/fetch-ssr'
+import { BannerCarousel, Drama, Layout, NowPlaying, Upcoming } from '../components'
 
-export default function Home({nowPlaying, upComing}) {
-    
+export default function Home({nowPlaying, upComing, drama}) {
   return (
     <>
       <Head>
@@ -13,7 +12,7 @@ export default function Home({nowPlaying, upComing}) {
         <BannerCarousel nowPlaying={nowPlaying} />
         <NowPlaying nowPlaying={nowPlaying} />
         <Upcoming upComing={upComing}/>
-        
+        <Drama drama={drama}/>
       </Layout>
     </>
   )
@@ -22,7 +21,8 @@ export default function Home({nowPlaying, upComing}) {
 export const getStaticProps = async () => {
   const nowPlaying = await fetchNowPlaying()
   const upComing = await fetchGenre(12)
-  if(!nowPlaying || !Upcoming){
+  const drama = await fetchGenre(18)
+  if(!nowPlaying || !Upcoming || !drama){
     return {
       notFound: true
     }
@@ -30,7 +30,8 @@ export const getStaticProps = async () => {
   return {
     props : {
        nowPlaying,
-       upComing
+       upComing,
+       drama
     }
   }
 }
