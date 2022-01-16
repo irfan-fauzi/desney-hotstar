@@ -10,6 +10,7 @@ const BannerCarousel = ({ nowPlaying }) => {
   
   return (
     <div>
+      <Gap className='h-[5rem]' />
       <Carousel 
         autoPlay
         infiniteLoop

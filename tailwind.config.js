@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'Manrope': ['Manrope', 'sans-serif']
+      'roboto': ['Roboto', 'sans-serif'],
     },
     container: {
       screens: {
