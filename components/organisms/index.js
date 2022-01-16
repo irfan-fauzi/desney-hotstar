@@ -5,7 +5,8 @@ import NowPlaying from './now-playing'
 import Upcoming from './upcoming'
 import Footer from './footer'
 import Drama from './drama'
+import Documentary from './documentary'
 
 export * from './genres-main-page'
 
-export { BannerCarousel, Header, NowPlaying, Upcoming, Drama, SectionMovie, Footer }
+export { BannerCarousel, Header, NowPlaying, Upcoming, Drama, SectionMovie, Footer, Documentary }

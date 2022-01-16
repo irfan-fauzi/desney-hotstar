@@ -1,10 +1,11 @@
+import { SectionMovie } from ".."
 
 
 const Drama = ({ drama }) => {
   return (
-    <div>
-      
-    </div>
+    <section>
+      <SectionMovie movies={drama} title='new drama' />
+    </section>
   )
 }
 
