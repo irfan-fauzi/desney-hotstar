@@ -1,46 +1,55 @@
 import Link from 'next/link'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel } from 'react-responsive-carousel'
-import { Gap, ItemCarouselHero } from '../..'
+import Image from 'next/image'
+import Slider from 'react-slick'
+import { Gap, ItemCarouselHero, NextArrowHero, PrevArrowHero } from '../..'
+import CONFIG from '../../../utils/config/config'
+
 
 
 const BannerCarousel = ({ nowPlaying }) => {
-
-  const movieNowPlaying = nowPlaying.results.filter(el => nowPlaying.results.indexOf(el) < 7)
   
+  const movieNowPlaying = nowPlaying.results.filter(el => nowPlaying.results.indexOf(el) < 7)
+  const settingsLists = {
+    
+    dots: false,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: <PrevArrowHero />,
+    nextArrow: <NextArrowHero />,
+    
+  }
   return (
     <div>
       <Gap className='h-[5rem]' />
-      <Carousel 
-        autoPlay
-        infiniteLoop
-        showStatus={false}
-        showIndicators={false}
-        showThumbs={false}
-        interval={9000}
-        >
+      <Slider {...settingsLists}>
       {
          movieNowPlaying.map(movie => (
 
-           <div key={movie.id} className='border'>
+           <div key={movie.id} >
               <ItemCarouselHero  movie={movie} />
               <Link href={`/detail/${movie.id}`} >
                 <a>
-                  <article className='block lg:hidden px-2 w-full'>
-                    <Gap className='h-5' />
-                    <p className='text-blue-400 text-2xl font-bold text-left w-9/12'>{movie.original_title}</p>
+                  <article className='block lg:hidden px-5 w-full relative -top-36 '>
+                    <div className='border inline-block p-[2px] rounded-lg bg-white'>
+                      <Image src={CONFIG.BASE_IMAGE_URL + movie.poster_path} width={150} height={200} className='rounded-lg'/>
+                    </div>
+                    <Gap className='h-3' />
+                    <p className='text-white text-2xl font-bold text-left'>{movie.original_title}</p>
                     <Gap className='h-2' />
                     <p className='text-left text-gray-400 font-bold text-lg'>{movie.release_date.slice(0, 4)}</p>
                     <Gap className='h-2' />        
                     <p className='line-clamp-3 font-light text-blue-200 text-left w-10/12'>{movie.overview}</p>
-                    
+                    <Gap className='h-3' />
+                    <div className='border-b border-gray-600'></div>
                   </article>
                 </a>
               </Link>
            </div>
          ))
        }
-      </Carousel>
+      </Slider>
      
     </div>
   )

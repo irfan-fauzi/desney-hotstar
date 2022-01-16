@@ -14,6 +14,8 @@ export default function Home({nowPlaying, upComing, drama}) {
         <Upcoming upComing={upComing}/>
         <Drama drama={drama}/>
       </Layout>
+      
+      
     </>
   )
 }
