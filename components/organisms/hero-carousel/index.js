@@ -37,9 +37,9 @@ const BannerCarousel = ({ nowPlaying }) => {
                     </div>
                     <Gap className='h-3' />
                     <p className='text-white text-2xl font-bold text-left'>{movie.original_title}</p>
-                    <Gap className='h-2' />
+                    <Gap className='h-1' />
                     <p className='text-left text-gray-400 font-bold text-lg'>{movie.release_date.slice(0, 4)}</p>
-                    <Gap className='h-2' />        
+                    <Gap className='h-1' />        
                     <p className='line-clamp-3 font-light text-blue-200 text-left w-10/12'>{movie.overview}</p>
                     <Gap className='h-3' />
                     <div className='border-b border-gray-600'></div>
