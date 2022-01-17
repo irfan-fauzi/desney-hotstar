@@ -1,2 +1,4 @@
 import Layout from './layout'
-export { Layout }
+import LayoutDetail from './layout-detail'
+
+export { Layout, LayoutDetail }

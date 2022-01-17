@@ -9,6 +9,7 @@ export default function Home({nowPlaying, upComing, drama, documentary}) {
       <Head>
         <title>Desney clone</title>
       </Head>
+
       <Layout>
         <BannerCarousel nowPlaying={nowPlaying} />
         <NowPlaying nowPlaying={nowPlaying} />
@@ -17,7 +18,6 @@ export default function Home({nowPlaying, upComing, drama, documentary}) {
         <Documentary documentary={documentary} />
         <Gap className='h-20' />
       </Layout>
-      
       
     </>
   )
