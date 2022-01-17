@@ -25,10 +25,10 @@ const Detail = ({reqDetail}) => {
         <div className='container-image relative after:content-["sa"] after:absolute after:top-0 after:bg-black after:w-full after:h-full after:opacity-80'>
           <Image src={CONFIG.BASE_IMAGE_URL + reqDetail.poster_path} className='inside-img ' layout='fill'/>
         </div>
-        <article className='rounded-3xl bg-gradient-slider-top relative -top-48 -mb-40'>
-          <div className='p-5 relative -top-40'>
+        <article className='rounded-3xl bg-gradient-slider-top relative -top-52 -mb-52'>
+          <div className='p-5 relative -top-48'>
             <div className=' inline-block px-1 pt-1 bg-black'>
-              <Image src={CONFIG.BASE_IMAGE_URL + reqDetail.poster_path} width={150} height={220}/>
+              <Image src={CONFIG.BASE_IMAGE_URL + reqDetail.poster_path} width={200} height={300}/>
             </div>
             <Gap className='h-2' />
             <p className='text-white font-bold text-2xl'>{reqDetail.title}</p>
