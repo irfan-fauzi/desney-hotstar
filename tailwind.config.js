@@ -39,6 +39,9 @@ module.exports = {
         '.bg-gradient-slider-top' : {
           background: `linear-gradient(180deg, #000000 21.99%, rgba(0, 0, 0, 0.941568) 31.75%, rgba(0, 0, 0, 0.857647) 46.04%, rgba(0, 0, 0, 0.783367) 55.8%, rgba(0, 0, 0, 0.669475) 63.12%, rgba(0, 0, 0, 0) 100%)`
         },
+        '.bg-gradient-detail' : {
+          background: `linear-gradient(to right top, #120336, #150333, #180330, #1a042d, #1b042a)`
+        },
 
 
         '.text-overflow' : {
