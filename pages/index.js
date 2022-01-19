@@ -1,9 +1,12 @@
+
 import Head from 'next/head'
 import { fetchGenre, fetchNowPlaying } from '../utils/fetch-ssr'
 import { BannerCarousel, Documentary, Drama, Gap, Layout, NowPlaying, Upcoming } from '../components'
 
+
+
 export default function Home({nowPlaying, upComing, drama, documentary}) {
-  
+
   return (
     <>
       <Head>

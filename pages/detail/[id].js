@@ -1,6 +1,7 @@
 import { fetchDetail } from "../../utils/fetch-ssr"
 import { DetailDesktop, DetailMobile, LayoutDetail } from '../../components'
 
+
 export async function getServerSideProps({params}) {
   const reqDetail = await fetchDetail(params.id)
   if(reqDetail.success == false) {

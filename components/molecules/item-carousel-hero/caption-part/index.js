@@ -7,7 +7,7 @@ const CaptionPart = ({movie}) => {
       <div className='px-10'>
         <Link href={`/detail/${movie.id}`}>
           <a>
-            <h1 className='text-4xl text-blue-400 text-left font-bold hover:text-red-500 transition'>{movie.original_title}</h1>
+            <h1 className='text-4xl text-blue-400 text-left font-bold hover:text-blue-200 transition'>{movie.original_title}</h1>
           </a>
         </Link>
         <Gap className='h-3' />

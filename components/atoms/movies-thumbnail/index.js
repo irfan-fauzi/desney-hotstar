@@ -9,7 +9,7 @@ const MoviesThumbnail = ({movie}) => {
       <div className='container-image lg:h-[14rem]'>
         <Link href={`/detail/${movie.id}`}>
           <a>
-            <Image src={CONFIG.BASE_IMAGE_URL + movie.poster_path}  alt="title" className='inside-img rounded-lg border' layout='fill'/>
+            <Image src={CONFIG.BASE_IMAGE_URL_500 + movie.poster_path}  alt="title" className='inside-img rounded-lg border' layout='fill'/>
          </a>
          </Link>
       </div>

@@ -8,14 +8,14 @@ const DetailDesktop = ({reqDetail}) => {
   const star = [1,2,3,4,5]
   return (
     <section className='relative'>
-          <div className='container-image relative after:content-[""] after:absolute after:bg-black after:w-full after:top-10 after:h-full after:opacity-80'>
+          <div className='container-image relative after:content-[""] after:absolute after:bg-black after:w-full after:top-10 after:h-full after:opacity-90'>
             <Image src={CONFIG.BASE_IMAGE_URL + reqDetail.backdrop_path} className='inside-img' layout='fill' />
             
           </div>
           <div className='absolute w-full top-[10rem] px-[3rem]'>
             <div className='flex gap-10'>
-              <div className=''>
-                <img src={CONFIG.BASE_IMAGE_URL + reqDetail.poster_path} className='w-[300px]' />
+              <div>
+                <img src={CONFIG.BASE_IMAGE_URL_500 + reqDetail.poster_path} className='rounded-md w-[300px]' />
               </div>
               <div className='w-7/12'>
                 <p className='text-white text-3xl'>{reqDetail.title}</p>
@@ -42,7 +42,7 @@ const DetailDesktop = ({reqDetail}) => {
                   {
                     reqDetail.production_companies.map(el => (
                       <div key={el.id} className='mt-3 bg-red-400 p-2 rounded-lg'>
-                        <img src={CONFIG.BASE_IMAGE_URL + el.logo_path} alt="logo" className={el.logo_path ? `w-[9rem] block` : `hidden`}/>                   
+                        <img src={CONFIG.BASE_IMAGE_URL_500 + el.logo_path} alt="logo" className={el.logo_path ? `w-[9rem] block` : `hidden`}/>                   
                       </div>
                     ))
                   }
