@@ -27,7 +27,7 @@ const Detail = ({reqDetail}) => {
       <div className='lg:hidden block'>
         <DetailMobile reqDetail={reqDetail} />
       </div>
-      <div>
+      <div className='hidden lg:block'>
         <section className='relative'>
           <div className='container-image relative after:content-[""] after:absolute after:bg-black after:w-full after:top-10 after:h-full after:opacity-80'>
             <Image src={CONFIG.BASE_IMAGE_URL + reqDetail.backdrop_path} className='inside-img' layout='fill' />
