@@ -1,6 +1,6 @@
 import {BsChevronCompactLeft, BsChevronCompactRight} from 'react-icons/bs'
 
-const PrevArrowHero = () => {
+const PrevArrowHero = (props) => {
   const {onClick} = props
   return (
   <div

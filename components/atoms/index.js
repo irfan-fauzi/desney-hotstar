@@ -1,5 +1,9 @@
 import Gap from './gap'
 import MoviesThumbnail from './movies-thumbnail'
 import MainLogo from './main-logo'
-import { PrevArrow, NextArrow, NextArrowHero, PrevArrowHero } from './button-carousel'
-export { Gap, MoviesThumbnail, MainLogo, PrevArrow, NextArrow, NextArrowHero, PrevArrowHero }
+import NextArrow from './button-carousel/next-arrow'
+import NextArrowHero from './button-carousel/next-arrow-hero'
+import PrevArrow from './button-carousel/prev-arrow'
+import PrevArrowHero from './button-carousel/prev-arrow-hero'
+
+export { Gap, MoviesThumbnail, MainLogo, NextArrow, NextArrowHero, PrevArrow, PrevArrowHero }
