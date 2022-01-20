@@ -1,57 +1,46 @@
-import Image from 'next/image'
-import { BsStarFill } from 'react-icons/bs'
-import { Gap } from '../..'
+import { HeroLayout } from '..'
+import { Gap, GenreInfo, RatingStar } from '../..'
 import CONFIG from '../../../utils/config/config'
+import { dateId } from '../../../utils/config/date'
 
 
 const DetailDesktop = ({reqDetail}) => {
-  const star = [1,2,3,4,5]
+ 
+  const dateRealese = dateId(reqDetail.release_date)
+  const director = reqDetail.credits.crew.filter(el => el.job === "Director")
+  const producer = reqDetail.credits.crew.filter(el => el.job === "Producer")
+  const screenPlay = reqDetail.credits.crew.filter(el => el.job === "Screenplay")
+  
+  
   return (
-    <section className='relative'>
-          <div className='container-image relative after:content-[""] after:absolute after:bg-black after:w-full after:top-10 after:h-full after:opacity-90'>
-            <Image src={CONFIG.BASE_IMAGE_URL + reqDetail.backdrop_path} className='inside-img' layout='fill' />
-            
+    <section>
+      <Gap className='h-[5rem]' />
+        <HeroLayout reqDetail={reqDetail}>
+        <Gap className='h-6' />
+        <article className='relative z-10 max-w-screen-xl mx-auto'>
+          <div className='flex gap-10'>
+            <section>
+              <div className='w-[300px]'>
+                <img src={CONFIG.BASE_IMAGE_URL_500 + reqDetail.poster_path} className='block rounded-lg'/>
+               </div> 
+            </section>
+            <section className='w-8/12'>
+              <h1 className='text-[2rem] text-white font-bold'>{reqDetail.title} <span className='font-normal text-2xl'>({reqDetail.release_date.slice(0, 4)})</span></h1>
+              <p className='text-gray-100 text-lg'>Release : {dateRealese}(US)</p>
+              <Gap className='h-2' />
+             <RatingStar />
+             <Gap className='h-2' />
+             <GenreInfo reqDetail={reqDetail} />
+             <Gap className='h-2' />
+             <p className='text-white font-semibold text-xl'>Sinopsis :</p>
+             <Gap className='h-2' />
+             <p className='text-white w-10/12'>{reqDetail.overview}</p>
+            </section>
           </div>
-          <div className='absolute w-full top-[10rem] px-[3rem]'>
-            <div className='flex gap-10'>
-              <div>
-                <img src={CONFIG.BASE_IMAGE_URL_500 + reqDetail.poster_path} className='rounded-md w-[300px]' />
-              </div>
-              <div className='w-7/12'>
-                <p className='text-white text-3xl'>{reqDetail.title}</p>
-                <Gap className='h-3' />
-                <div className='flex gap-2 items-center'>
-                  <div className='flex gap-2 '>
-                    {star.map(el => (
-                      <BsStarFill className={star.indexOf(el) > 3 ? `text-white` : `text-red-400`} />
-                    ))}
-                  </div>
-                  <p className='text-gray-400 font-bold'>{reqDetail.vote_average}</p>
-                </div>
-                <Gap className='h-2' />
-                <div className='flex gap-4'>
-                  {reqDetail.genres.map(genre => (
-                    <p key={genre.id} className='text-gray-100 uppercase text-[0.8rem]'>{genre.name}</p>
-                  ))}
-                </div>
-                <Gap className='h-2' />
-                <p className='text-white'>{reqDetail.overview}</p>
-                <Gap className='h-10' />
-                <p className='text-white'>Production by :</p>
-                <div className='flex items-end gap-4'>
-                  {
-                    reqDetail.production_companies.map(el => (
-                      <div key={el.id} className='mt-3 bg-red-400 p-2 rounded-lg'>
-                        <img src={CONFIG.BASE_IMAGE_URL_500 + el.logo_path} alt="logo" className={el.logo_path ? `w-[9rem] block` : `hidden`}/>                   
-                      </div>
-                    ))
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-         
-        </section>
+        </article>
+      </HeroLayout>
+     
+    </section>
   )
 }
 

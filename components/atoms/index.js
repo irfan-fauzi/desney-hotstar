@@ -5,5 +5,7 @@ import NextArrow from './button-carousel/next-arrow'
 import NextArrowHero from './button-carousel/next-arrow-hero'
 import PrevArrow from './button-carousel/prev-arrow'
 import PrevArrowHero from './button-carousel/prev-arrow-hero'
+import RatingStar from './ratings-star'
+import GenreInfo from './genres-info'
 
-export { Gap, MoviesThumbnail, MainLogo, NextArrow, NextArrowHero, PrevArrow, PrevArrowHero }
+export { Gap, MoviesThumbnail, MainLogo, NextArrow, NextArrowHero, PrevArrow, PrevArrowHero, RatingStar, GenreInfo }

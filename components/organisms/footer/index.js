@@ -5,7 +5,7 @@ import appStore from '../../../public/assets/images/store.png'
 
 const Footer = () => {
   return (
-    <footer className='bg-black px-10 py-7 text-white'>
+    <footer className='bg-black px-10 py-7 text-white mt-auto'>
       <div className='flex items-center justify-between lg:flex-row flex-col'>
         <div className='lg:w-4/12 lg:block flex flex-col'>
           <Image src={logo} width={100} height={50} />

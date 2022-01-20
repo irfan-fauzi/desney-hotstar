@@ -7,6 +7,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
+      'source-san':['Source Sans Pro', 'sans-serif']
     },
     container: {
       screens: {

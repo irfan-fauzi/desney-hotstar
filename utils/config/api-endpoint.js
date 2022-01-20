@@ -83,7 +83,7 @@ const API_ENDPOINT = {
   ALL : `${CONFIG.BASE_URL}discover/movie?sort_by=popularity.desc&api_key=${CONFIG.KEY}`,
   NOW_PLAYING: `${CONFIG.BASE_URL}movie/now_playing?api_key=${CONFIG.KEY}&language=${CONFIG.DEFAULT_LANGUAGE}&page=1`,
   UPCOMING: `${CONFIG.BASE_URL}movie/upcoming?api_key=${CONFIG.KEY}&language=${CONFIG.DEFAULT_LANGUAGE}&page=1`,
-  DETAIL: (id) => `${CONFIG.BASE_URL}movie/${id}?api_key=${CONFIG.KEY}`,
+  DETAIL: (id) => `${CONFIG.BASE_URL}movie/${id}?api_key=${CONFIG.KEY}&append_to_response=credits`,
   GENRES : (id) => `${CONFIG.BASE_URL}discover/movie?sort_by=popularity.desc&api_key=${CONFIG.KEY}&with_genres=${id}`,
   CASTS: (id) => `${CONFIG.BASE_URL}movie/${id}/casts?api_key=${CONFIG.KEY}`,
   REVIEWS: (id) => `${CONFIG.BASE_URL}movie/${id}/reviews?api_key=${CONFIG.KEY}`

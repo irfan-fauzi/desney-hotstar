@@ -3,7 +3,7 @@ const CONFIG = {
   BASE_URL: 'https://api.themoviedb.org/3/',
   BASE_IMAGE_URL: 'https://image.tmdb.org/t/p/original/',
   BASE_IMAGE_URL_500: 'https://image.tmdb.org/t/p/w500/',
-  DEFAULT_LANGUAGE: 'en-us',
+  DEFAULT_LANGUAGE: 'en-US',
 }
 
 export default CONFIG
