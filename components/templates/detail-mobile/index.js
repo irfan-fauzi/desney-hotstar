@@ -25,7 +25,7 @@ const DetailMobile = ({reqDetail}) => {
           <div className='flex gap-2 items-center'>
             <div className='flex gap-2 '>
               {star.map(el => (
-                <BsStarFill key={el.id} className={star.indexOf(el) > 3 ? `text-white` : `text-red-400`} />
+                <BsStarFill key={el} className={star.indexOf(el) > 3 ? `text-white` : `text-red-400`} />
               ))}
             </div>
             <p className='text-gray-400 font-bold'>{reqDetail.vote_average}</p>

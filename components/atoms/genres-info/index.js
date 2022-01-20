@@ -3,7 +3,7 @@ const GenreInfo = ({reqDetail}) => {
     <div className='flex gap-4'>
     {
       reqDetail.genres.map(genre => (
-        <p key={genre.id} className='text-gray-100 uppercase text-[0.8rem]'>{genre.name}</p>
+        <p key={genre.name} className='text-gray-100 uppercase text-[0.8rem]'>{genre.name}</p>
       ))
     }
   </div>

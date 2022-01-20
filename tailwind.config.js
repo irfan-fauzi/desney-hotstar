@@ -43,6 +43,9 @@ module.exports = {
         '.bg-gradient-detail' : {
           background: `linear-gradient(to right top, #120336, #150333, #180330, #1a042d, #1b042a)`
         },
+        '.bg-gradient-button-casts' : {
+          background: `linear-gradient(269.52deg, #FFFFFF 17.77%, rgba(255, 255, 255, 0.806497) 42.77%, rgba(255, 255, 255, 0.314917) 67.75%, rgba(255, 255, 255, 0.210435) 74.36%, rgba(255, 255, 255, 0.0918587) 85.04%, rgba(255, 255, 255, 0) 99.61%)`
+        },
 
 
         '.text-overflow' : {
