@@ -1,3 +1,4 @@
+import { Container } from ".."
 import { Footer, HeaderDetail } from "../.."
 
 

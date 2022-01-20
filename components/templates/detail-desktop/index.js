@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import {BiChevronDown, BiChevronUp} from 'react-icons/bi'
-import { HeroLayout } from '..'
+import { Container, HeroLayout } from '..'
 import { Gap, GenreInfo, ListActors, RatingStar } from '../..'
 import CONFIG from '../../../utils/config/config'
+
 
 const DetailDesktop = ({reqDetail, reviews}) => {
   
@@ -12,7 +13,7 @@ const DetailDesktop = ({reqDetail, reviews}) => {
   const producer = reqDetail.credits.crew.filter(el => el.job === "Producer")
   const screenPlay = reqDetail.credits.crew.filter(el => el.job === "Screenplay")
   
-  console.log(showReview)
+  
   return (
     <section>
       <Gap className='h-[5rem]' />
@@ -70,7 +71,7 @@ const DetailDesktop = ({reqDetail, reviews}) => {
       </HeroLayout>
       <div className='bg-gray-50'>
         <Gap className='h-5' />
-        <div className='max-w-screen-xl mx-auto'>
+        <Container>
           <p className='font-bold text-xl'>Casts :</p>
           <Gap className='h-3' />
           <div className='flex gap-4'>
@@ -126,7 +127,7 @@ const DetailDesktop = ({reqDetail, reviews}) => {
             )
           }
           <Gap className='h-10' />
-        </div>
+        </Container>
         
      </div>
     </section>
