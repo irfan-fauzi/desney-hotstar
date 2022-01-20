@@ -12,6 +12,12 @@ const fetchCasts = async (id) => {
   return resjson
 }
 
+const fetchReviews = async (id) => {
+  const res = await fetch(API_ENDPOINT.REVIEWS(id))
+  const resJson = await res.json()
+  return resJson
+}
+
 const fetchNowPlaying = async () => {
   try {
     const res = await fetch(API_ENDPOINT.NOW_PLAYING)
@@ -52,4 +58,4 @@ const fetchUpcoming = async () => {
   }
 }
 
-export { fetchNowPlaying, fetchUpcoming, fetchDetail, fetchAllMovies, fetchGenre, fetchCasts }
+export { fetchNowPlaying, fetchUpcoming, fetchDetail, fetchAllMovies, fetchGenre, fetchCasts, fetchReviews }

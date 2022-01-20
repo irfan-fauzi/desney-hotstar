@@ -32,11 +32,9 @@ const DetailMobile = ({reqDetail}) => {
           </div>
           <Gap className='h-2' />
           <div className='flex gap-4'>
-            {
-              reqDetail.genres.map(genre => (
-                <p key={genre.id} className='text-gray-700 uppercase text-[0.8rem]'>{genre.name}</p>
-              ))
-            }
+            {reqDetail.genres.map(genre => (
+              <p key={genre.id} className='text-gray-700 uppercase text-[0.8rem]'>{genre.name}</p>
+            ))}
           </div>
           <Gap className='h-2' />
           <p className='text-white font-light lg:w-10/12'>{reqDetail.overview}</p>

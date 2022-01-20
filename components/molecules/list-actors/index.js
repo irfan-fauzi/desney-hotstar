@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import Slider from 'react-slick'
-import { Gap, NextArrow, NextArrowCast, PrevArrow, PrevArrowCast } from '../..'
+import { Gap, NextArrowCast, PrevArrowCast } from '../..'
 import CONFIG from '../../../utils/config/config';
 
 
@@ -37,7 +37,7 @@ const ListActors = ({casts}) => {
     <Slider {...settingsLists}>
       {
         movieCasts.map(cast => (
-          <div className='p-2'>
+          <div key={cast.name} className='p-2'>
           <div className='container-image '>
             <Link href={`/detail/`} >
               <a>
