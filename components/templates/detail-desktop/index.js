@@ -30,8 +30,8 @@ const DetailDesktop = ({reqDetail, reviews}) => {
               <h1 className='text-[2rem] text-white font-bold'>{reqDetail.title} <span className='font-normal text-3xl'>({reqDetail.release_date.slice(0, 4)})</span></h1>
               <p className='text-gray-100 text-lg'>Release : {dateRealese}(US)</p>
               <Gap className='h-2' />
-             <RatingStar />
-             <Gap className='h-2' />
+              <RatingStar />
+              <Gap className='h-2' />
               <div className='flex gap-4'>
               {reqDetail.genres.map(genre => (
                 <p key={genre.name} className='text-gray-100 uppercase text-[0.8rem]'>{genre.name}</p>))}
