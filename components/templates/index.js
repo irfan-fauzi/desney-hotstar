@@ -1,10 +1,14 @@
 import DetailMobile from './detail-mobile'
 import Layout from './layout'
 import LayoutDetail from './layout-detail'
-DetailMobile
 import DetailDesktop from './detail-desktop'
 import HeroCarouselMobile from './hero-carousel-mobile'
 import HeroLayout from './detail-desktop/hero-layout'
 import Container from './container'
+import CastAndInfo from './detail-desktop/cast-and-info'
+import MovieImage from './detail-desktop/movie-image'
+import MovieDetail from './detail-desktop/movie-detail'
+import ProductionCompany from './detail-desktop/production-company'
+import ReviewComment from './detail-desktop/review-comment'
 
-export { Layout, LayoutDetail, DetailMobile, DetailDesktop, HeroCarouselMobile, HeroLayout, Container }
+export { Layout, LayoutDetail, DetailMobile, DetailDesktop, HeroCarouselMobile, HeroLayout, Container, CastAndInfo, MovieImage, MovieDetail, ProductionCompany, ReviewComment }

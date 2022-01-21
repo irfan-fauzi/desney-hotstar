@@ -1,27 +1,41 @@
 import { useContext, useEffect } from "react"
 import { fetchDetail, fetchReviews } from "../../utils/fetch-ssr"
 import { DetailDesktop, DetailMobile, LayoutDetail } from '../../components'
-import { MovieContext, PreviewContext, PreviewProvider } from "../../utils/config/context"
+import { MovieContext, PreviewContext } from "../../utils/config/context"
+import { useRouter } from "next/router"
+import { useState } from "react/cjs/react.development"
 
-
-export async function getServerSideProps({params}) {
-  const reqDetail = await fetchDetail(params.id)
-  const reviews = await fetchReviews(params.id)
-  if(reqDetail.success == false || reviews.success == false) {
-    return {
-      notFound: true
+const Detail = () => {
+  const router = useRouter()
+  const {id} = router.query
+  const [detailMovie, setDetailMovie] = useContext(MovieContext)
+  const [preview, setPreview] = useContext(PreviewContext)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    let componentMounted = true
+    if(id != null){
+      fetchDetail(id).then((movie) => {
+        if(componentMounted){
+          setDetailMovie(movie)
+          setLoading(false)
+        }
+      })
+      fetchReviews(id).then((review) => {
+        if(componentMounted){
+          setPreview(review)
+        }
+      })
     }
-  }
-  return {
-    props: {reqDetail, reviews}
-  }
-}
-
-const Detail = ({reqDetail, reviews}) => {
- 
+    return () => { 
+      componentMounted = false
+      setPreview(null)
+      setDetailMovie(null) 
+    }
+  },[id])
    
   return (
     <LayoutDetail>
+      
       {detailMovie && preview && (
           <><div className='lg:hidden block'>
             <DetailMobile reqDetail={detailMovie} />
