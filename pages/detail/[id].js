@@ -35,12 +35,11 @@ const Detail = () => {
    
   return (
     <LayoutDetail>
-      
       {detailMovie && preview && (
           <><div className='lg:hidden block'>
             <DetailMobile reqDetail={detailMovie} />
           </div><div className='hidden lg:block'>
-            <DetailDesktop reqDetail={detailMovie} reviews={preview} />
+            <DetailDesktop />
           </div></>
       )}
     </LayoutDetail>
