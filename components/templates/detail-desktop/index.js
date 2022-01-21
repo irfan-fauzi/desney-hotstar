@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {BiChevronDown, BiChevronUp} from 'react-icons/bi'
 import { Container, HeroLayout } from '..'
-import { Gap, GenreInfo, ListActors, RatingStar } from '../..'
+import { Gap, ListActors, RatingStar } from '../..'
 import CONFIG from '../../../utils/config/config'
 
 

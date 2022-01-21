@@ -1,5 +1,7 @@
+import { useContext, useEffect } from "react"
 import { fetchDetail, fetchReviews } from "../../utils/fetch-ssr"
 import { DetailDesktop, DetailMobile, LayoutDetail } from '../../components'
+import { MovieContext, PreviewContext, PreviewProvider } from "../../utils/config/context"
 
 
 export async function getServerSideProps({params}) {
@@ -16,16 +18,30 @@ export async function getServerSideProps({params}) {
 }
 
 const Detail = ({reqDetail, reviews}) => {
+  const movieState = useContext(MovieContext)
+  const reviewState = useContext(PreviewContext)
+  const [detailMovie, setDetailMovie] = movieState
+  const [preview, setPreview] = reviewState
+  useEffect(() => {
+    setDetailMovie(reqDetail)
+    setPreview(reviews)
+    return () => {
+      setDetailMovie(null)
+      setPreview(null) 
+    }
+  },[])
   
   return (
     <LayoutDetail>
-      <div className='lg:hidden block'>
-        <DetailMobile reqDetail={reqDetail} />
-      </div>
-      <div className='hidden lg:block'>
-        <DetailDesktop reqDetail={reqDetail} reviews={reviews} />
-      </div>
+      {detailMovie && preview && (
+          <><div className='lg:hidden block'>
+            <DetailMobile reqDetail={detailMovie} />
+          </div><div className='hidden lg:block'>
+            <DetailDesktop reqDetail={reqDetail} reviews={preview} />
+          </div></>
+      )}
     </LayoutDetail>
+    
   )
 }
 

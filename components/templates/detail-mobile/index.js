@@ -1,13 +1,17 @@
 import Image from 'next/image'
+import { useContext } from 'react'
 import { BsStarFill } from 'react-icons/bs'
 import { Gap } from '../..'
 import CONFIG from '../../../utils/config/config'
+import { MovieContext } from '../../../utils/config/context'
 
 
 const DetailMobile = ({reqDetail}) => {
-  const star = [1,2,3,4,5]
+  
+  const star = [1,2,3,4,5,4]
   return (
     <section>
+      
     <div className='container-image relative after:content-[""] after:absolute after:top-0 after:bg-black after:w-full after:h-full lg:after:opacity-70 after:opacity-20'>
       <Image src={CONFIG.BASE_IMAGE_URL + reqDetail.backdrop_path} className='inside-img ' layout='fill'/>
     </div>
@@ -25,7 +29,7 @@ const DetailMobile = ({reqDetail}) => {
           <div className='flex gap-2 items-center'>
             <div className='flex gap-2 '>
               {star.map(el => (
-                <BsStarFill key={el} className={star.indexOf(el) > 3 ? `text-white` : `text-red-400`} />
+                <BsStarFill key={Math.random()} className={star.indexOf(el) > 3 ? `text-white` : `text-red-400`} />
               ))}
             </div>
             <p className='text-gray-400 font-bold'>{reqDetail.vote_average}</p>
