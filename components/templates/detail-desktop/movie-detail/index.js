@@ -20,7 +20,7 @@ const MovieDetail = () => {
       <Gap className='h-2' />
       <p className='text-white w-11/12'>{detailMovie.overview}</p>
       <Gap className='h-5' />
-      <Crews />         
+      <Crews className={'flex gap-20 w-10/12'}/>         
     </section>
   )
 };

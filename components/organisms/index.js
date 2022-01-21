@@ -7,8 +7,9 @@ import Footer from './footer'
 import Drama from './drama'
 import Documentary from './documentary'
 import HeaderDetail from './header/header-detail'
+import InfoTambahan from './info-tambahan'
 
 
 export * from './genres-main-page'
 
-export { BannerCarousel, Header, NowPlaying, Upcoming, Drama, SectionMovie, Footer, Documentary, HeaderDetail }
+export { BannerCarousel, Header, NowPlaying, Upcoming, Drama, SectionMovie, Footer, Documentary, HeaderDetail, InfoTambahan }

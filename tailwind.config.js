@@ -46,6 +46,9 @@ module.exports = {
         '.bg-gradient-button-casts' : {
           background: `linear-gradient(269.52deg, #FFFFFF 17.77%, rgba(255, 255, 255, 0.806497) 42.77%, rgba(255, 255, 255, 0.314917) 67.75%, rgba(255, 255, 255, 0.210435) 74.36%, rgba(255, 255, 255, 0.0918587) 85.04%, rgba(255, 255, 255, 0) 99.61%)`
         },
+        '.bg-gradient-button-casts-left' : {
+          background: `linear-gradient(90deg, #FFFFFF 17.47%, rgba(255, 255, 255, 0.806497) 42.68%, rgba(255, 255, 255, 0.314917) 67.88%, rgba(255, 255, 255, 0.210435) 74.54%, rgba(255, 255, 255, 0.0918587) 85.31%, rgba(255, 255, 255, 0) 100%)`
+        },
 
 
         '.text-overflow' : {

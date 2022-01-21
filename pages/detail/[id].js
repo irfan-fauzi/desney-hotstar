@@ -17,9 +17,8 @@ const Detail = () => {
       fetchDetail(id).then((movie) => {
         if(componentMounted){
           setDetailMovie(movie)
-          setLoading(false)
         }
-      })
+      }).finally(() => setLoading(false))
       fetchReviews(id).then((review) => {
         if(componentMounted){
           setPreview(review)

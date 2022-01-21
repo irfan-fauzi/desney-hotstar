@@ -3,10 +3,13 @@ import Image from 'next/image';
 import Slider from 'react-slick'
 import { Gap, NextArrowCast, PrevArrowCast } from '../..'
 import CONFIG from '../../../utils/config/config';
+import { useContext } from 'react';
+import { MovieContext } from '../../../utils/config/context';
 
 
-const ListActors = ({casts}) => {
-  const movieCasts = [...casts]
+const ListActors = () => {
+  const [detailMovie, setDetailMovie] = useContext(MovieContext)
+  const movieCasts = detailMovie.credits.cast
   const settingsLists = {
     dots: false,
     infinite: true,

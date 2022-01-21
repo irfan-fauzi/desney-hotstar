@@ -3,13 +3,13 @@ import { Gap } from "../../../..";
 import { MovieContext } from "../../../../../utils/config/context";
 
 
-const Crews = () => {
+const Crews = ({className}) => {
   const [detailMovie, setDetailMovie] = useContext(MovieContext)
   const director = detailMovie.credits.crew.filter(el => el.job === "Director")
   const producer = detailMovie.credits.crew.filter(el => el.job === "Producer")
   const screenPlay = detailMovie.credits.crew.filter(el => el.job === "Screenplay")
   return (
-  <div className='flex gap-20 w-10/12'>
+  <div className={className}>
               <div>
                 <p className='text-white capitalize font-bold italic'>director</p>
                 <Gap className='h-2' />
