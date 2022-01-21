@@ -21,15 +21,19 @@ const Detail = ({detailMovies, review}) => {
   const [preview, setPreview] = useContext(PreviewContext)
   setDetailMovie(detailMovies)
   setPreview(review)
- 
+  
   return (
     <LayoutDetail>
-      
-          <><div className='lg:hidden block'>
+     {
+       detailMovie && preview && (
+         <><div className='lg:hidden block'>
             <DetailMobile/>
           </div><div className='hidden lg:block'>
             <DetailDesktop />
           </div></>
+       )
+     }
+          
       
     </LayoutDetail>
   )
