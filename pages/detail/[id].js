@@ -22,14 +22,8 @@ const Detail = ({reqDetail, reviews}) => {
   const reviewState = useContext(PreviewContext)
   const [detailMovie, setDetailMovie] = movieState
   const [preview, setPreview] = reviewState
-  useEffect(() => {
-    setDetailMovie(reqDetail)
-    setPreview(reviews)
-    return () => {
-      setDetailMovie(null)
-      setPreview(null) 
-    }
-  },[])
+  setDetailMovie(reqDetail)
+  setPreview(reviews)
   
   return (
     <LayoutDetail>

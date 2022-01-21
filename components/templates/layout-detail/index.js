@@ -1,14 +1,17 @@
 import { Container } from ".."
 import { Footer, HeaderDetail } from "../.."
+import { MovieProvider, PreviewProvider } from "../../../utils/config/context"
 
 
 const LayoutDetail = ({children}) => {
   return (
+
     <div className="min-h-screen bg-gray-900 font-source-san lg:flex lg:flex-col">
-      <HeaderDetail />
-        { children }
-      <Footer />
+          <HeaderDetail />
+            { children }
+          <Footer />
     </div>
+    
     
   )
 }
