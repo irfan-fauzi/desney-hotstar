@@ -4,7 +4,6 @@ import { MovieContext } from '../../../utils/config/context';
 
 const RatingStar = () => {
   const [detailMovie, setDetailMovie] = useContext(MovieContext)
-  console.log(detailMovie.vote_average)
   const star = [1,2,3,4,5]
   return (
     <div className='flex items-center gap-4'>
