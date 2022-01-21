@@ -10,7 +10,6 @@ const Detail = () => {
   const {id} = router.query
   const [detailMovie, setDetailMovie] = useContext(MovieContext)
   const [preview, setPreview] = useContext(PreviewContext)
-  const [loading, setLoading] = useState(true)
   useEffect(() => {
     let componentMounted = true
     if(id != null){
@@ -18,7 +17,7 @@ const Detail = () => {
         if(componentMounted){
           setDetailMovie(movie)
         }
-      }).finally(() => setLoading(false))
+      })
       fetchReviews(id).then((review) => {
         if(componentMounted){
           setPreview(review)
