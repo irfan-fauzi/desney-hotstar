@@ -3,7 +3,6 @@ import { fetchDetail, fetchReviews } from "../../utils/fetch-ssr"
 import { DetailDesktop, DetailMobile, LayoutDetail } from '../../components'
 import { MovieContext, PreviewContext } from "../../utils/config/context"
 import { useRouter } from "next/router"
-import { useState } from "react/cjs/react.development"
 
 const Detail = () => {
   const router = useRouter()
@@ -41,7 +40,6 @@ const Detail = () => {
           </div></>
       )}
     </LayoutDetail>
-    
   )
 }
 
