@@ -18,20 +18,15 @@ export async function getServerSideProps({params}) {
 }
 
 const Detail = ({reqDetail, reviews}) => {
-  const movieState = useContext(MovieContext)
-  const reviewState = useContext(PreviewContext)
-  const [detailMovie, setDetailMovie] = movieState
-  const [preview, setPreview] = reviewState
-  setDetailMovie(reqDetail)
-  setPreview(reviews)
-  
+ 
+   
   return (
     <LayoutDetail>
       {detailMovie && preview && (
           <><div className='lg:hidden block'>
             <DetailMobile reqDetail={detailMovie} />
           </div><div className='hidden lg:block'>
-            <DetailDesktop reqDetail={reqDetail} reviews={preview} />
+            <DetailDesktop reqDetail={detailMovie} reviews={preview} />
           </div></>
       )}
     </LayoutDetail>
