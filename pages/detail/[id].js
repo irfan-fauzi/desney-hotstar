@@ -1,16 +1,18 @@
 import { useContext, useEffect, useState } from "react"
-import { fetchDetail, fetchReviews } from "../../utils/fetch-ssr"
+import { fetchDetail, fetchReviews, fetchSimilarMovie } from "../../utils/fetch-ssr"
 import { DetailDesktop, DetailMobile, Gap, LayoutDetail } from '../../components'
-import { LoadingContext, MovieContext, PreviewContext } from "../../utils/config/context"
+import { LoadingContext, MovieContext, PreviewContext, SimilarMovieContext } from "../../utils/config/context"
 import { useRouter } from "next/router"
+import API_ENDPOINT from "../../utils/config/api-endpoint"
 
 const Detail = () => {
   const router = useRouter()
   const {id} = router.query
   const [detailMovie, setDetailMovie] = useContext(MovieContext)
   const [preview, setPreview] = useContext(PreviewContext)
+  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
   const [loading, setLoading] = useState(true)
-
+  
   useEffect(() => {
     let componentMounted = true
     if(id != null){
@@ -26,6 +28,13 @@ const Detail = () => {
           setLoading(false)
         }
       })
+      fetchSimilarMovie(id).then((movie) => {
+        if(componentMounted){
+          setSimilarMovie(movie)
+          setLoading(false)
+        }
+      })
+     
     }
     return () => { 
       componentMounted = false
@@ -51,7 +60,7 @@ const Detail = () => {
           </div>
         </div>
       ) : (
-        detailMovie && preview && (
+        detailMovie && preview && similarMovie && (
         <>
         <div className='lg:hidden block'>
           <DetailMobile />

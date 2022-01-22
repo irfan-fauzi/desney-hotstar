@@ -1,8 +1,11 @@
-// import {  } from '..'
-import { Gap, CastAndInfo, Container, HeroLayout, MovieDetail, MovieImage, ProductionCompany, ReviewComment } from '../..'
+import { useContext } from 'react'
+import { Gap, CastAndInfo, Container, HeroLayout, MovieDetail, MovieImage, ProductionCompany, ReviewComment, ListCarouselMovie } from '../..'
+import { SimilarMovieContext } from '../../../utils/config/context'
+
 
 const DetailDesktop = () => {
-    
+
+  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)  
   return (
     <section>
       <Gap className='h-[5rem]' />
@@ -23,9 +26,14 @@ const DetailDesktop = () => {
           <ProductionCompany />
           <Gap className='h-10' />
           <ReviewComment />
+          <Gap className='h-5' />
+          <p className="text-xl font-semibold">Similar Movies :</p>
+          <Gap className='h-5' />
+          <ListCarouselMovie movies={similarMovie.results} />
           <Gap className='h-10' />
         </Container>
      </div>
+    
     </section>
   )
 }

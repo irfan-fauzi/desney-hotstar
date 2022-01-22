@@ -1,8 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const MovieContext = createContext()
 export const PreviewContext = createContext()
 export const showMenuContext = createContext()
+export const SimilarMovieContext = createContext()
 
 export const MovieProvider = (props) => {
   const [detailMovie, setDetailMovie] = useState(null)
@@ -29,5 +30,14 @@ export const ShowMenuProvider = (props) => {
     <showMenuContext.Provider value={[showMenu, setShowMenu]} >
       {props.children}
     </showMenuContext.Provider>
+  )
+}
+
+export const SimilarMovieProvider = (props) => {
+  const [similarMovie, setSimilarMovie] = useState(null)
+  return (
+    <SimilarMovieContext.Provider value={[similarMovie, setSimilarMovie]}>
+      {props.children}
+    </SimilarMovieContext.Provider>
   )
 }

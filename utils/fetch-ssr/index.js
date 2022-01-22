@@ -12,6 +12,12 @@ const fetchCasts = async (id) => {
   return resjson
 }
 
+const fetchSimilarMovie = async (id) => {
+  const res = await fetch(API_ENDPOINT.SIMILIAR(id))
+  const resjson = await res.json()
+  return resjson
+}
+
 const fetchReviews = async (id) => {
   const res = await fetch(API_ENDPOINT.REVIEWS(id))
   const resJson = await res.json()
@@ -58,4 +64,4 @@ const fetchUpcoming = async () => {
   }
 }
 
-export { fetchNowPlaying, fetchUpcoming, fetchDetail, fetchAllMovies, fetchGenre, fetchCasts, fetchReviews }
+export { fetchNowPlaying, fetchUpcoming, fetchDetail, fetchAllMovies, fetchGenre, fetchCasts, fetchReviews, fetchSimilarMovie }

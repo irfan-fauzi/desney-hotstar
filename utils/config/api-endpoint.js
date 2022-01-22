@@ -87,7 +87,8 @@ const API_ENDPOINT = {
   GENRES : (id) => `${CONFIG.BASE_URL}discover/movie?sort_by=popularity.desc&api_key=${CONFIG.KEY}&with_genres=${id}`,
   CASTS: (id) => `${CONFIG.BASE_URL}movie/${id}/casts?api_key=${CONFIG.KEY}`,
   REVIEWS: (id) => `${CONFIG.BASE_URL}movie/${id}/reviews?api_key=${CONFIG.KEY}`,
-  SEARCH_MOVIE: (query) => `${CONFIG.BASE_URL}search/movie?api_key=${CONFIG.KEY}&query=${query}`
+  SEARCH_MOVIE: (query) => `${CONFIG.BASE_URL}search/movie?api_key=${CONFIG.KEY}&query=${query}`,
+  SIMILIAR: (id) => `${CONFIG.BASE_URL}movie/${id}/similar?api_key=${CONFIG.KEY}&language=${CONFIG.DEFAULT_LANGUAGE}&page=1`
 
 }
 
