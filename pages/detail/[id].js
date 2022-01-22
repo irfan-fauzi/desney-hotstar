@@ -10,7 +10,7 @@ const Detail = () => {
   const {id} = router.query
   const [detailMovie, setDetailMovie] = useContext(MovieContext)
   const [preview, setPreview] = useContext(PreviewContext)
-  
+  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
@@ -36,6 +36,22 @@ const Detail = () => {
       
     }
   },[id])
+
+  useEffect(() => {
+    let componentMounted = true
+    if(id != null){
+      fetchSimilarMovie(id).then((movie) => {
+        if(componentMounted){
+          setSimilarMovie(movie)
+          setLoading(false)
+        }
+      })
+    }
+    return () => {
+      componentMounted = false
+      setSimilarMovie(null)
+    }
+  },[id])
    
   return (
     <LayoutDetail>
@@ -59,3 +75,4 @@ const Detail = () => {
 }
 
 export default Detail
+

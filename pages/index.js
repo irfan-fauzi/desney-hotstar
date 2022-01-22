@@ -6,7 +6,7 @@ import { BannerCarousel, Documentary, Drama, Gap, Layout, MainLogo, MenuButtonMo
 
 
 export default function Home({nowPlaying, upComing, drama, documentary}) {
-
+  
   return (
     <>
       <Head>

@@ -1,10 +1,13 @@
 
+import { useContext } from 'react'
 import { Gap, CastAndInfo, Container, HeroLayout, MovieDetail, MovieImage, ProductionCompany, ReviewComment, ListCarouselMovie } from '../..'
+import { SimilarMovieContext } from '../../../utils/config/context'
 
 
 
 const DetailDesktop = () => {
-
+  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
+  console.log(similarMovie)
   return (
     <section>
       <Gap className='h-[5rem]' />
