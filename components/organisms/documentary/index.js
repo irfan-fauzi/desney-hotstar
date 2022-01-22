@@ -1,9 +1,11 @@
 import { SectionMovie } from ".."
+import { Gap } from "../.."
 
 const Documentary = ({ documentary }) => {
   return (
-    <div className="mb-10">
-      <SectionMovie movies={documentary} title='documentary' />
+    <div>
+      <SectionMovie movies={documentary} title='Popular TV Movies' />
+      <Gap className='h-20' />
     </div>
   )
 }

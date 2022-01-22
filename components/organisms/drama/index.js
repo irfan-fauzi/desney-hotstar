@@ -4,7 +4,7 @@ import { SectionMovie } from ".."
 const Drama = ({ drama }) => {
   return (
     <section>
-      <SectionMovie movies={drama} title='new drama' />
+      <SectionMovie movies={drama} title='new thriller' />
     </section>
   )
 }
