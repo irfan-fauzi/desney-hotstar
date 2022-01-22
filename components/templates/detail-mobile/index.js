@@ -1,11 +1,13 @@
-
+import { useContext } from "react"
 import { ReviewComment } from ".."
 import { Gap, InfoTambahan, ListActors, ListCarouselMovie } from "../.."
+import { SimilarMovieContext } from "../../../utils/config/context"
 import ImageHeader from "./image-header"
 import TitleGenreSinopsis from "./title-genre-sinopsis"
 
 const DetailMobile = () => {
-
+  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
+  
   return (
     <section>
       <article>
@@ -26,7 +28,11 @@ const DetailMobile = () => {
           <p className="text-xl font-semibold">Similar Movies :</p>
         </div>
         <Gap className='h-5' />
-       
+        {
+           similarMovie && (
+             <ListCarouselMovie movies={similarMovie.results} />
+           )
+         }
         <Gap className='h-5' />
       </article>      
   
