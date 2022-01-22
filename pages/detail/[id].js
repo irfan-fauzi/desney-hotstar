@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react"
 import { fetchDetail, fetchReviews, fetchSimilarMovie } from "../../utils/fetch-ssr"
 import { DetailDesktop, DetailMobile, Gap, LayoutDetail } from '../../components'
-import { LoadingContext, MovieContext, PreviewContext, SimilarMovieContext } from "../../utils/config/context"
+import { MovieContext, PreviewContext, SimilarMovieContext } from "../../utils/config/context"
 import { useRouter } from "next/router"
-import API_ENDPOINT from "../../utils/config/api-endpoint"
+
 
 const Detail = () => {
   const router = useRouter()
@@ -39,7 +39,8 @@ const Detail = () => {
     return () => { 
       componentMounted = false
       setPreview(null)
-      setDetailMovie(null) 
+      setDetailMovie(null)
+      setSimilarMovie(null) 
     }
   },[id])
    
