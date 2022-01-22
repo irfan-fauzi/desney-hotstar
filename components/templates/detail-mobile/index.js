@@ -10,13 +10,7 @@ import TitleGenreSinopsis from "./title-genre-sinopsis"
 const DetailMobile = () => {
   const router = useRouter()
   const {id} = router.query
-  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
-
-  useEffect(async() => {
-    const movie = await fetchSimilarMovie(id)
-    setSimilarMovie(movie)
-  },[])
-  
+ 
   return (
     <section>
       <article>
@@ -37,11 +31,7 @@ const DetailMobile = () => {
           <p className="text-xl font-semibold">Similar Movies :</p>
         </div>
         <Gap className='h-5' />
-        {
-          similarMovie && (
-            <ListCarouselMovie movies={similarMovie.results} />
-          )
-        }
+       
         <Gap className='h-5' />
       </article>      
   
