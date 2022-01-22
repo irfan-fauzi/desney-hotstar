@@ -6,7 +6,7 @@ const Genre = () => {
   return (
     <div className='flex gap-4'>
       {detailMovie.genres.map(genre => (
-         <p key={genre.name} className='text-gray-500 uppercase text-[0.8rem]'>{genre.name}</p>))}
+         <p key={genre.name} className='text-gray-200 uppercase text-[0.8rem]'>{genre.name}</p>))}
     </div>
   )
 };

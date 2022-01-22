@@ -19,6 +19,7 @@ const BannerCarousel = ({ nowPlaying }) => {
         breakpoint: 1024,
         settings: {
          autoplay: false,
+         dots: false
         }
       },
     ] 
@@ -30,7 +31,6 @@ const BannerCarousel = ({ nowPlaying }) => {
         {movieNowPlaying.map(movie => (
            <div key={movie.id} className='bg-black h-0'>
               <ItemCarouselHero  movie={movie} />
-              <HeroCarouselMobile movie={movie} />
            </div>
         ))}
       </Slider>

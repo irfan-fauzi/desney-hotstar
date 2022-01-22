@@ -15,9 +15,9 @@ const TitleGenreSinopsis = () => {
       <RatingStar />
       <Gap className='h-3' />
       <Genre />
-      <Gap className='h-2' />
-      <p className="text-gray-50 font-light">{detailMovie.overview}</p>
       <Gap className='h-5' />
+      <p className="text-gray-50 font-light leading-7">{detailMovie.overview}</p>
+      <Gap className='h-10' />
       <Crews className={'flex gap-4 '} />
       
     </article>
