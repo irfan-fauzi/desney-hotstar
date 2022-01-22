@@ -26,7 +26,7 @@ const BannerCarousel = ({ nowPlaying }) => {
   }
   return (
     <div>
-      <Gap className='h-[4rem]' />
+      <Gap className='h-[4.5rem]' />
       <Slider {...settingsLists}>
         {movieNowPlaying.map(movie => (
            <div key={movie.id} className='bg-black h-0'>

@@ -1,7 +1,5 @@
-import { useContext } from "react"
-import { ProductionCompany, ReviewComment } from ".."
+import { ReviewComment } from ".."
 import { Gap, InfoTambahan, ListActors } from "../.."
-import { MovieContext } from "../../../utils/config/context"
 import ImageHeader from "./image-header"
 import TitleGenreSinopsis from "./title-genre-sinopsis"
 

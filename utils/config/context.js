@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const MovieContext = createContext()
 export const PreviewContext = createContext()
-export const LoadingContext = createContext()
+export const showMenuContext = createContext()
 
 export const MovieProvider = (props) => {
   const [detailMovie, setDetailMovie] = useState(null)
@@ -22,11 +22,12 @@ export const PreviewProvider = (props) => {
   )
 }
 
-export const LoadingProvider = (props) => {
-  const [loading, setLoading] = useState(true)
+
+export const ShowMenuProvider = (props) => {
+  const [showMenu, setShowMenu] = useState(false)
   return (
-    <PreviewProvider.Provider value={[loading, setLoading]}>
+    <showMenuContext.Provider value={[showMenu, setShowMenu]} >
       {props.children}
-    </PreviewProvider.Provider>
+    </showMenuContext.Provider>
   )
 }
