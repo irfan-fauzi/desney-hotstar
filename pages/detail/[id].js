@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { fetchDetail, fetchReviews, fetchSimilarMovie } from "../../utils/fetch-ssr"
-import { DetailDesktop, DetailMobile, Gap, LayoutDetail } from '../../components'
+import { DetailDesktop, DetailMobile, Gap, LayoutDetail, SkeletonLoading } from '../../components'
 import { MovieContext, PreviewContext, SimilarMovieContext } from "../../utils/config/context"
 import { useRouter } from "next/router"
 
@@ -40,19 +40,7 @@ const Detail = () => {
   return (
     <LayoutDetail>
       {loading ? (
-        <div className="relative h-[100vh] w-full bg-black">
-          <div className="px-4">
-            <div className="relative top-20 mx-auto max-w-screen-lg h-[200px] bg-gradient-slider-right animate-pulse"></div>
-            <Gap className='h-5' />
-            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
-            <Gap className='h-5' />
-            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
-            <Gap className='h-5' />
-            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
-            <Gap className='h-5' />
-            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
-          </div>
-        </div>
+        <SkeletonLoading />
       ) : (
         detailMovie && preview && (
         <>

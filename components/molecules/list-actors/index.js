@@ -42,14 +42,10 @@ const ListActors = () => {
         movieCasts.map(cast => (
           <div key={cast.name} className='p-2'>
           <div className='container-image '>
-            <Link href={`/detail/`} >
-              <a>
                 <Image src={CONFIG.BASE_IMAGE_URL_500 + cast.profile_path}  alt="title" className='inside-img rounded-lg border' layout='fill'/>
                 <Gap className='h-2' />
                 <p className='font-bold text-gray-800 text-sm'>{cast.name}</p>
                 <p className='text-gray-700 text-sm'>{cast.character}</p>
-             </a>
-             </Link>
           </div>
         </div>
         ))

@@ -1,6 +1,6 @@
-import { useContext } from 'react'
+
 import { Gap, CastAndInfo, Container, HeroLayout, MovieDetail, MovieImage, ProductionCompany, ReviewComment, ListCarouselMovie } from '../..'
-import { SimilarMovieContext } from '../../../utils/config/context'
+
 
 
 const DetailDesktop = () => {
