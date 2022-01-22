@@ -5,11 +5,11 @@ import { useContext } from "react";
 import { showMenuContext } from "../../../utils/config/context";
 
 
-const MenuButtonMobile = () => {
+const MenuButtonMobile = ({className}) => {
   const [showMenu, setShowMenu] = useContext(showMenuContext)
 
   return (
-    <div className='w-full h-[80px] bg-black fixed top-0 z-50 rounded-b-3xl flex items-center justify-between px-4 lg:hidden'>
+    <div className={className}>
       <MainLogo />
       <button onClick={() => setShowMenu(!showMenu)} className='text-white'>
         {!showMenu ? (<BiMenuAltRight size={40} />) : (<AiOutlineClose  size={40} />)}

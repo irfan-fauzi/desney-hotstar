@@ -1,15 +1,20 @@
 import { useContext } from "react"
 import { ReviewComment } from ".."
-import { Gap, InfoTambahan, ListActors, ListCarouselMovie } from "../.."
+import { Gap, InfoTambahan, ListActors, ListCarouselMovie, MenuButtonMobile } from "../.."
 import { SimilarMovieContext } from "../../../utils/config/context"
 import ImageHeader from "./image-header"
 import TitleGenreSinopsis from "./title-genre-sinopsis"
+import {AiOutlineHome} from 'react-icons/ai'
+import { useRouter } from "next/dist/client/router"
 
 const DetailMobile = () => {
   const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
+  const router = useRouter()
   
   return (
+
     <section>
+     <button onClick={() => router.push('/')} className="fixed top-5 right-5 z-[60] rounded-full bg-red-500 p-3"><AiOutlineHome size={20} color="#fff"/></button>
       <article>
         <ImageHeader />
       </article>
