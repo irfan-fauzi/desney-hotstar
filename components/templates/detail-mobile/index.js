@@ -7,7 +7,7 @@ import TitleGenreSinopsis from "./title-genre-sinopsis"
 
 const DetailMobile = () => {
   
-  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
+  
   
   return (
     <section>
@@ -30,7 +30,7 @@ const DetailMobile = () => {
         </div>
         <Gap className='h-5' />
         
-        <ListCarouselMovie movies={similarMovie.results} />
+        
         <Gap className='h-5' />
       </article>      
   

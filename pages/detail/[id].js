@@ -10,7 +10,7 @@ const Detail = () => {
   const {id} = router.query
   const [detailMovie, setDetailMovie] = useContext(MovieContext)
   const [preview, setPreview] = useContext(PreviewContext)
-  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
+  
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
@@ -28,19 +28,14 @@ const Detail = () => {
           setLoading(false)
         }
       })
-      fetchSimilarMovie(id).then((movie) => {
-        if(componentMounted){
-          setSimilarMovie(movie)
-          setLoading(false)
-        }
-      })
+     
      
     }
     return () => { 
       componentMounted = false
       setPreview(null)
       setDetailMovie(null)
-      setSimilarMovie(null) 
+      
     }
   },[id])
    
@@ -61,7 +56,7 @@ const Detail = () => {
           </div>
         </div>
       ) : (
-        detailMovie && preview && similarMovie && (
+        detailMovie && preview && (
         <>
         <div className='lg:hidden block'>
           <DetailMobile />
