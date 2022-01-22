@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { ProductionCompany, ReviewComment } from ".."
 import { Gap, InfoTambahan, ListActors } from "../.."
 import { MovieContext } from "../../../utils/config/context"
 import ImageHeader from "./image-header"
@@ -20,6 +21,8 @@ const DetailMobile = () => {
         <Gap className='h-5' />
         <div className="px-4">
           <InfoTambahan />
+          <Gap className='h-5' />
+          <ReviewComment />
         </div>
         <Gap className='h-5' />
       </article>      
