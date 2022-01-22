@@ -4,7 +4,7 @@ import { Gap, HeroCarouselMobile, ItemCarouselHero, NextArrowHero, PrevArrowHero
 const BannerCarousel = ({ nowPlaying }) => {  
   const movieNowPlaying = nowPlaying.results.filter(el => nowPlaying.results.indexOf(el) < 7)
   const settingsLists = {
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -14,13 +14,21 @@ const BannerCarousel = ({ nowPlaying }) => {
     cssEase: "ease-in",
     prevArrow: <PrevArrowHero />,
     nextArrow: <NextArrowHero />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+         autoplay: false,
+        }
+      },
+    ] 
   }
   return (
     <div>
       <Gap className='h-[4rem]' />
       <Slider {...settingsLists}>
         {movieNowPlaying.map(movie => (
-           <div key={movie.id} className='bg-gradient-slider-top'>
+           <div key={movie.id} className='bg-black h-0'>
               <ItemCarouselHero  movie={movie} />
               <HeroCarouselMobile movie={movie} />
            </div>
