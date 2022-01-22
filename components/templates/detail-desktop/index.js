@@ -7,7 +7,7 @@ import { SimilarMovieContext } from '../../../utils/config/context'
 
 const DetailDesktop = () => {
   const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
-  console.log(similarMovie)
+  
   return (
     <section>
       <Gap className='h-[5rem]' />
@@ -31,7 +31,11 @@ const DetailDesktop = () => {
           <Gap className='h-5' />
           <p className="text-xl font-semibold">Similar Movies :</p>
           <Gap className='h-5' />
-         
+         {
+           similarMovie && (
+             <ListCarouselMovie movies={similarMovie.results} />
+           )
+         }
           <Gap className='h-10' />
         </Container>
      </div>
