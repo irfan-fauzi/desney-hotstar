@@ -10,7 +10,7 @@ const Header = () => {
     <div>
       
     <div className={`fixed lg:top-0 lg:right-0 ${showMenu ? `right-0` : `right-[100rem]`} z-50 bg-gray-900  lg:block w-full h-screen lg:h-auto transition-all`}>
-      <nav className='lg:px-10 px-1 py-2 text-gray-300 text-[1.1rem] mt-40 lg:mt-0'>
+      <nav className='lg:px-10 px-1 py-2 text-gray-300 text-[1.1rem] mt-[8rem] lg:mt-0'>
         <div className="flex items-center lg:flex-row flex-col-reverse lg:gap-3 gap-10">
           <div className='lg:w-1/12'>
             <MainLogo />

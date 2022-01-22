@@ -8,9 +8,8 @@ export default function Home({nowPlaying, upComing, drama, documentary}) {
       <Head>
         <title>Desney clone</title>
       </Head>
-
       <Layout>
-        <MenuButtonMobile className={`w-full h-[70px] bg-black fixed top-0 z-50 rounded-b-xl flex items-center justify-between px-4 lg:hidden`} />
+        <MenuButtonMobile className={`w-full h-[70px] bg-gray-900 fixed top-0 z-50 rounded-b-md flex items-center justify-between px-4 lg:hidden`} />
         <BannerCarousel nowPlaying={nowPlaying} />
         <NowPlaying nowPlaying={nowPlaying} />
         <Upcoming upComing={upComing}/>

@@ -12,7 +12,7 @@ const MenuButtonMobile = ({className}) => {
     <div className={className}>
       <MainLogo />
       <button onClick={() => setShowMenu(!showMenu)} className='text-white'>
-        {!showMenu ? (<BiMenuAltRight size={40} />) : (<AiOutlineClose  size={40} />)}
+        {!showMenu ? (<BiMenuAltRight size={40} />) : (<AiOutlineClose  size={30} />)}
           
       </button>
     </div>
