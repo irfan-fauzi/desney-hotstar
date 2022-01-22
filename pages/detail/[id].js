@@ -28,8 +28,6 @@ const Detail = () => {
           setLoading(false)
         }
       })
-     
-     
     }
     return () => { 
       componentMounted = false

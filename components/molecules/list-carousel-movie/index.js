@@ -2,7 +2,7 @@ import Slider from 'react-slick'
 import { MoviesThumbnail, NextArrow, PrevArrow } from '../..'
 
 
-const ListCarouselMovie = ({ movies}) => {
+const ListCarouselMovie = ({ movies }) => {
   const myMovie = [...movies]
   const settingsLists = {
     dots: false,

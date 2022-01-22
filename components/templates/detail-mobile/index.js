@@ -1,13 +1,21 @@
-import { useContext } from "react/cjs/react.development"
+import { useRouter } from "next/router"
+import { useContext, useEffect } from "react/cjs/react.development"
 import { ReviewComment } from ".."
 import { Gap, InfoTambahan, ListActors, ListCarouselMovie } from "../.."
 import { SimilarMovieContext } from "../../../utils/config/context"
+import { fetchSimilarMovie } from "../../../utils/fetch-ssr"
 import ImageHeader from "./image-header"
 import TitleGenreSinopsis from "./title-genre-sinopsis"
 
 const DetailMobile = () => {
-  
-  
+  const router = useRouter()
+  const {id} = router.query
+  const [similarMovie, setSimilarMovie] = useContext(SimilarMovieContext)
+
+  useEffect(async() => {
+    const movie = await fetchSimilarMovie(id)
+    setSimilarMovie(movie)
+  },[])
   
   return (
     <section>
@@ -29,8 +37,11 @@ const DetailMobile = () => {
           <p className="text-xl font-semibold">Similar Movies :</p>
         </div>
         <Gap className='h-5' />
-        
-        
+        {
+          similarMovie && (
+            <ListCarouselMovie movies={similarMovie.results} />
+          )
+        }
         <Gap className='h-5' />
       </article>      
   
