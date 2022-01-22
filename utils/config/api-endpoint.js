@@ -86,7 +86,9 @@ const API_ENDPOINT = {
   DETAIL: (id) => `${CONFIG.BASE_URL}movie/${id}?api_key=${CONFIG.KEY}&append_to_response=credits`,
   GENRES : (id) => `${CONFIG.BASE_URL}discover/movie?sort_by=popularity.desc&api_key=${CONFIG.KEY}&with_genres=${id}`,
   CASTS: (id) => `${CONFIG.BASE_URL}movie/${id}/casts?api_key=${CONFIG.KEY}`,
-  REVIEWS: (id) => `${CONFIG.BASE_URL}movie/${id}/reviews?api_key=${CONFIG.KEY}`
+  REVIEWS: (id) => `${CONFIG.BASE_URL}movie/${id}/reviews?api_key=${CONFIG.KEY}`,
+  SEARCH_MOVIE: (query) => `${CONFIG.BASE_URL}search/movie?api_key=${CONFIG.KEY}&query=${query}`
+
 }
 
 export default API_ENDPOINT

@@ -19,7 +19,7 @@ export default function Home({nowPlaying, upComing, drama, documentary}) {
         <Upcoming upComing={upComing}/>
         <Drama drama={drama}/>
         <Documentary documentary={documentary} />
-        <Gap className='h-20' />
+        <Gap className='h-50' />
       </Layout>
       
     </>
@@ -28,9 +28,9 @@ export default function Home({nowPlaying, upComing, drama, documentary}) {
 
 export const getStaticProps = async () => {
   const nowPlaying = await fetchNowPlaying()
-  const upComing = await fetchGenre(12)
+  const upComing = await fetchGenre(10749)
   const drama = await fetchGenre(18)
-  const documentary = await fetchGenre(99)
+  const documentary = await fetchGenre(10402)
   
   if(!nowPlaying || !Upcoming || !drama){
     return {
