@@ -4,7 +4,7 @@ const HeaderDetail = () => {
   return (
     <div className='fixed top-0 z-40 lg:bg-gray-900 hidden lg:block w-full'>
      <Container> 
-      <nav className="pt-3">
+      <nav className="pt-3 px-4">
         <div className="flex items-center gap-3 text-gray-300 text-[1.1rem]">
           <div className='lg:w-1/12'>
             <MainLogo />

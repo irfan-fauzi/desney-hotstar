@@ -7,7 +7,9 @@ const CastAndInfo = () => {
   
   return (
     <>
-    <p className='font-bold text-xl'>Casts :</p><Gap className='h-3' /><div className='flex gap-4'>
+    
+    <Gap className='h-3' />
+    <div className='flex gap-4'>
       <div className='w-9/12 '>
         <ListActors />
       </div>

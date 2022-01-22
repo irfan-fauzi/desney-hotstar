@@ -6,7 +6,7 @@ import { MovieContext } from "../../../../utils/config/context";
 const ProductionCompany = () => {
  const [detailMovie, setDetailMovie] = useContext(MovieContext)
   return (
-    <><p className='font-bold text-xl'>production companies</p><Gap className='h-5' /><div className='p-2 lg:w-full rounded-lg lg:rounded-xl '>
+    <><p className='font-bold text-xl ml-2'>production companies</p><Gap className='h-5' /><div className='p-2 lg:w-full rounded-lg lg:rounded-xl '>
       <div className='flex text-center items-center gap-20'>
         {detailMovie.production_companies.map(el => (
           <div key={el.id} className='mt-3'>
