@@ -1,7 +1,6 @@
 import Slider from 'react-slick'
 import { Gap, HeroCarouselMobile, ItemCarouselHero, NextArrowHero, PrevArrowHero } from '../..'
 
-
 const BannerCarousel = ({ nowPlaying }) => {  
   const movieNowPlaying = nowPlaying.results.filter(el => nowPlaying.results.indexOf(el) < 7)
   const settingsLists = {
@@ -11,7 +10,7 @@ const BannerCarousel = ({ nowPlaying }) => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 800,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     cssEase: "ease-in",
     prevArrow: <PrevArrowHero />,
     nextArrow: <NextArrowHero />,

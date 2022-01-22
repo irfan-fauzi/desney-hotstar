@@ -10,7 +10,7 @@ const HeroCarouselMobile = ({movie}) => {
     <a>
       <article className='block lg:hidden px-5 w-full relative -top-36'>
         <div className='border inline-block p-[2px] rounded-lg bg-white'>
-          <Image src={CONFIG.BASE_IMAGE_URL + movie.poster_path} width={150} height={200} className='rounded-lg'/>
+          <Image src={CONFIG.BASE_IMAGE_URL_500 + movie.poster_path} width={150} height={200} className='rounded-lg'/>
         </div>
         <Gap className='h-3' />
         <p className='text-white text-2xl font-bold text-left'>{movie.original_title}</p>

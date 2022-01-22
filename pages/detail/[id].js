@@ -1,7 +1,7 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import { fetchDetail, fetchReviews } from "../../utils/fetch-ssr"
-import { DetailDesktop, DetailMobile, LayoutDetail } from '../../components'
-import { MovieContext, PreviewContext } from "../../utils/config/context"
+import { DetailDesktop, DetailMobile, Gap, LayoutDetail } from '../../components'
+import { LoadingContext, MovieContext, PreviewContext } from "../../utils/config/context"
 import { useRouter } from "next/router"
 
 const Detail = () => {
@@ -9,17 +9,21 @@ const Detail = () => {
   const {id} = router.query
   const [detailMovie, setDetailMovie] = useContext(MovieContext)
   const [preview, setPreview] = useContext(PreviewContext)
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
     let componentMounted = true
     if(id != null){
       fetchDetail(id).then((movie) => {
         if(componentMounted){
           setDetailMovie(movie)
+          setLoading(false)
         }
       })
       fetchReviews(id).then((review) => {
         if(componentMounted){
           setPreview(review)
+          setLoading(false)
         }
       })
     }
@@ -32,13 +36,33 @@ const Detail = () => {
    
   return (
     <LayoutDetail>
-      {detailMovie && preview && (
-          <><div className='lg:hidden block'>
-            <DetailMobile reqDetail={detailMovie} />
-          </div><div className='hidden lg:block'>
-            <DetailDesktop />
-          </div></>
-      )}
+      {loading ? (
+        <div className="relative h-[100vh] w-full bg-black">
+          <div className="px-4">
+            <div className="relative top-20 mx-auto max-w-screen-lg h-[200px] bg-gradient-slider-right animate-pulse"></div>
+            <Gap className='h-5' />
+            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
+            <Gap className='h-5' />
+            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
+            <Gap className='h-5' />
+            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
+            <Gap className='h-5' />
+            <div className="relative top-20 mx-auto max-w-screen-lg h-[35px] bg-gradient-slider-right animate-pulse "></div>
+          </div>
+        </div>
+      ) : (
+        detailMovie && preview && (
+        <>
+        <div className='lg:hidden block'>
+          <DetailMobile />
+        </div>
+        <div className='hidden lg:block'>
+          <DetailDesktop />
+        </div>
+        </>
+        )
+      )
+    }
     </LayoutDetail>
   )
 }
