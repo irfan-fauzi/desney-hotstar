@@ -9,7 +9,7 @@ const MenuButtonMobile = ({className}) => {
   const [showMenu, setShowMenu] = useContext(showMenuContext)
 
   return (
-    <div className={className}>
+    <div className='w-full h-[70px] bg-gray-900 fixed top-0 z-50 rounded-b-md flex items-center justify-between px-4 lg:hidden'>
       <MainLogo />
       <button onClick={() => setShowMenu(!showMenu)} className='text-white'>
         {!showMenu ? (<BiMenuAltRight size={40} />) : (<AiOutlineClose  size={30} />)}

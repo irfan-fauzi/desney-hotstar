@@ -10,7 +10,7 @@ export default function Home({nowPlaying, upComing, drama, documentary}) {
         <title>Desney clone</title>
       </Head>
       <Layout>
-        <MenuButtonMobile className={`w-full h-[70px] bg-gray-900 fixed top-0 z-50 rounded-b-md flex items-center justify-between px-4 lg:hidden`} />
+        <MenuButtonMobile />
         <BannerCarousel nowPlaying={nowPlaying} />
         <Gap className='h-5' />
         <ColorGenre />

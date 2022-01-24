@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Gap, Layout, LayoutDetail } from '../../components';
+import { Container, Gap, Layout, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
 import CONFIG from '../../utils/config/config';
 import { fetchGenre } from '../../utils/fetch-ssr';
 
@@ -12,7 +12,6 @@ export const getStaticPaths = async () => {
       params: { id: genre.id.toString()}
     }
   })
-
   return {
     paths,
     fallback: false
@@ -31,16 +30,21 @@ export const getStaticProps = async (context) => {
 
 
 const GenresMovies = ({genres}) => {
+  const movies = genres.results
   
   return (
     <LayoutDetail>
-      <Gap className='h-10' />
-      <Container>
-      <section className=''>
-      <p className='mt-10'>detail</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatem tempore vel! Ut odit ipsam facilis quas dolores nulla itaque ex laudantium cumque voluptas esse sint, molestias expedita asperiores repudiandae architecto corporis quidem maxime dicta quo, nostrum molestiae dignissimos unde. Velit quo quisquam nemo esse sed deserunt, aperiam unde ducimus, quibusdam harum eos officia nam corporis vitae molestiae earum, sequi totam nulla aliquam veritatis quidem itaque accusantium! Mollitia reprehenderit molestiae architecto eius, ratione, cum voluptates non obcaecati dolores quae dolorum perspiciatis sed ab animi explicabo optio nemo harum natus minus consequatur porro! Praesentium perspiciatis ipsa consequatur vel enim. Iure, id.</p>
+      <MenuButtonMobile />
+      <Gap className='h-20' />
+      <section className='mx-auto w-full max-w-7xl'>
+        <article className='grid md:grid-genres md:gap-5 gap-y-5 grid-cols-2'>
+          {movies.map(movie => (
+            
+            <MoviesThumbnail key={movie.id} movie={movie} />
+          ))}
+         </article>
       </section>
-      </Container>
+      <Gap className='h-20' />
     </LayoutDetail>
   )
 };
