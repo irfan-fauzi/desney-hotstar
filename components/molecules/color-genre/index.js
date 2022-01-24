@@ -25,7 +25,7 @@ const ColorGenre = () => {
     <section className='lg:hidden'>
     <Slider {...settingsLists}>
       <button onClick={() => router.push('/genre/28')} className='text-sm py-5 rounded-lg px-5 -ml-28 text-white bg-black border border-gray-500'><GiBoxingGlove size={20} className='inline-block mr-2' />Action</button>
-      <button onClick={() => router.push('/genre/99')} className='border border-gray-500 text-sm py-5 rounded-lg px-0  -ml-24 bg-black text-white '><FaBook size={20} className=' inline-block mr-2'/>Documenter</button>
+      <button onClick={() => router.push('/genre/10752')} className='border border-gray-500 text-sm py-5 rounded-lg px-0  -ml-24 bg-black text-white '><FaBook size={20} className=' inline-block mr-2'/>War</button>
       <button onClick={() => router.push('/genre/27')} className='text-sm text-white py-5 rounded-lg px-0   -ml-20 bg-black border border-gray-500'><BsPeopleFill size={20} className='inline-block mr-2' />Horror</button>
       <button onClick={() => router.push('/genre/37')} className='text-sm text-white py-5 rounded-lg px-0 -ml-16 bg-black border border-gray-500'><GiWesternHat size={20} className='inline-block mr-2' /> Western</button>
       <button></button>

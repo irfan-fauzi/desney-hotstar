@@ -1,4 +1,4 @@
-import { ButtonHome, ColorGenre, Gap, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
+import { ButtonHome, ColorGenre, Gap, LayoutDetail, ListSelectedMovies, MenuButtonMobile, MoviesThumbnail } from '../../components';
 import CONFIG from '../../utils/config/config';
 import { fetchGenre } from '../../utils/fetch-ssr';
 
@@ -20,31 +20,30 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const id = context.params.id
   const genres = await fetchGenre(id)
+ 
   return {
     props: {
-      genres,id
+      genres
     }
   }
 }
 
 
-const GenresMovies = ({genres, id}) => {
+const GenresMovies = ({genres}) => {
   
   const movies = genres.results
- 
+  
+
+  // 440249 381749 24593 61927
   return (
     <LayoutDetail>
       <ButtonHome />
-      <div className=' fixed z-50 w-full bottom-0 bg-black py-5'>
+      <div className='lg:hidden fixed z-50 w-full bottom-0 bg-black py-5'>
         <ColorGenre />
       </div>
       <Gap className='h-5' />
       <section className='mx-auto w-full max-w-7xl'>
-        <article className='grid md:grid-genres md:gap-5 gap-y-5 grid-cols-2'>
-          {movies.map(movie => (
-            <MoviesThumbnail key={movie.id} movie={movie} />
-          ))}
-         </article>
+        <ListSelectedMovies movies={movies} />
       </section>
       <Gap className='h-20' />
     </LayoutDetail>

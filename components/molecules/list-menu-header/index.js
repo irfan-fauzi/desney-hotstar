@@ -50,9 +50,9 @@ const ListMenuHeader = () => {
             <li>Western</li>
           </a>
         </Link>
-        <Link href={`/genre/99`}>
+        <Link href={`/genre/10752`}>
           <a>
-            <li>Documentary</li>
+            <li>War</li>
           </a>
         </Link>
       </ul></>

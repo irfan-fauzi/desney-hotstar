@@ -10,6 +10,7 @@ import RatingStar from './ratings-star'
 import GenreInfo from './genres-info'
 import NextArrowCast from './button-carousel/next-arrow-casts'
 import ButtonHome from './button-home'
+import Search from './search'
 
 
-export {ButtonHome ,Gap, MoviesThumbnail, MainLogo, NextArrow, NextArrowHero, PrevArrow, PrevArrowHero, RatingStar, GenreInfo, NextArrowCast, PrevArrowCast }
+export {Search ,ButtonHome ,Gap, MoviesThumbnail, MainLogo, NextArrow, NextArrowHero, PrevArrow, PrevArrowHero, RatingStar, GenreInfo, NextArrowCast, PrevArrowCast }
