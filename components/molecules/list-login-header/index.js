@@ -5,7 +5,7 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 const ListLoginHeader = () => {
   return (
     <ul className='flex items-center justify-end gap-5 lg:flex-row flex-col'>
-      <li className='border-b w-full border-gray-500 flex justify-between py-3'>
+      <li className='border-b w-full border-gray-500 flex justify-between lg:py-2 py-3'>
          <input type="text" className='bg-transparent outline-none ' placeholder='Search' />
          <button><BiSearch className='text-3xl lg:text-2xl'/></button>
       </li>
