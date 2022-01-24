@@ -7,9 +7,9 @@ function MyApp({ Component, pageProps }) {
     <SimilarMovieProvider>
     <MovieProvider>
       <PreviewProvider>
-        
-        <Component {...pageProps} />
-       
+        <ShowMenuProvider>
+          <Component {...pageProps} />
+        </ShowMenuProvider>
       </PreviewProvider>
     </MovieProvider>
     </SimilarMovieProvider>

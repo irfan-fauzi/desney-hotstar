@@ -8,9 +8,9 @@ const LayoutDetail = ({children}) => {
     <div className="min-h-screen bg-gray-900 font-source-san lg:flex lg:flex-col">
       
       <ShowMenuProvider>
-      <Header />
-        { children }
-      <Footer />
+        <Header />
+          { children }
+        <Footer />
       </ShowMenuProvider>
      
     </div>
