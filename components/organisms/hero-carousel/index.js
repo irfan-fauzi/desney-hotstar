@@ -2,6 +2,7 @@ import Slider from 'react-slick'
 import { Gap, HeroCarouselMobile, ItemCarouselHero, NextArrowHero, PrevArrowHero } from '../..'
 
 const BannerCarousel = ({ nowPlaying }) => {  
+
   const movieNowPlaying = nowPlaying.results.filter(el => nowPlaying.results.indexOf(el) < 7)
   const settingsLists = {
     dots: false,

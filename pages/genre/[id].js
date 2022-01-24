@@ -1,10 +1,6 @@
-import { useContext, useEffect } from 'react';
-
-import { Container, Gap, Layout, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
+import { Gap, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
 import CONFIG from '../../utils/config/config';
-import { showMenuContext } from '../../utils/config/context';
 import { fetchGenre } from '../../utils/fetch-ssr';
-
 
 
 export const getStaticPaths = async () => {

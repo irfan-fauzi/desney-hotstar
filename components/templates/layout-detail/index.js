@@ -1,18 +1,11 @@
-import { Container } from ".."
-import { Footer, Header, HeaderDetail } from "../.."
-import { MovieProvider, PreviewProvider, ShowMenuProvider, SimilarMovieProvider } from "../../../utils/config/context"
-
+import { Footer, Header} from "../.."
 
 const LayoutDetail = ({children}) => {
   return (
     <div className="min-h-screen bg-gray-900 font-source-san lg:flex lg:flex-col">
-      
-      <ShowMenuProvider>
         <Header />
           { children }
         <Footer />
-      </ShowMenuProvider>
-     
     </div>
     
     
