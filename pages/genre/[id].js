@@ -34,8 +34,6 @@ export const getStaticProps = async (context) => {
 
 
 const GenresMovies = ({genres}) => {
-  
-  const [showMenu, setShowMenu] = useContext(showMenuContext)
 
   const movies = genres.results
   
