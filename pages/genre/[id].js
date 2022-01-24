@@ -31,7 +31,7 @@ export const getStaticProps = async (context) => {
 
 
 const GenresMovies = ({genres}) => {
-  console.log(genres)
+  
   return (
     <LayoutDetail>
       <Gap className='h-10' />

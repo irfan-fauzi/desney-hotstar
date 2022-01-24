@@ -9,7 +9,7 @@ const ImagePart = ({movie}) => {
         <a>
         <picture>
         <source media="(max-width: 600px)" srcSet={CONFIG.BASE_IMAGE_URL_500 + movie.backdrop_path} type="image/jpeg" />
-        <img src={CONFIG.BASE_IMAGE_URL + movie.backdrop_path} className="w-full"/>
+        <img src={CONFIG.BASE_IMAGE_URL + movie.backdrop_path} className="w-full rounded-xl"/>
         </picture>
         </a>
         </Link> 

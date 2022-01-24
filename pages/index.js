@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import { fetchGenre, fetchNowPlaying } from '../utils/fetch-ssr'
-import { BannerCarousel, Documentary, Drama, Gap, Layout, MenuButtonMobile, NowPlaying, Upcoming } from '../components'
-export default function Home({nowPlaying, upComing, drama, documentary}) {
-  
+import { BannerCarousel, ColorGenre, Documentary, Drama, Gap, Layout, MenuButtonMobile, NowPlaying, Upcoming } from '../components'
+
+
+export default function Home({nowPlaying, upComing, drama, documentary}) {  
   return (
     <>
       <Head>
@@ -11,6 +12,8 @@ export default function Home({nowPlaying, upComing, drama, documentary}) {
       <Layout>
         <MenuButtonMobile className={`w-full h-[70px] bg-gray-900 fixed top-0 z-50 rounded-b-md flex items-center justify-between px-4 lg:hidden`} />
         <BannerCarousel nowPlaying={nowPlaying} />
+        <Gap className='h-5' />
+        <ColorGenre />
         <NowPlaying nowPlaying={nowPlaying} />
         <Upcoming upComing={upComing}/>
         <Drama drama={drama}/>
