@@ -1,14 +1,11 @@
-import { useEffect, useContext } from 'react';
-import { Gap, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
+import { ColorGenre, Gap, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
 import CONFIG from '../../utils/config/config';
-import { showMenuContext } from '../../utils/config/context';
 import { fetchGenre } from '../../utils/fetch-ssr';
 
 
 export const getStaticPaths = async () => {
   const res = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${CONFIG.KEY}&language=en-US`)
   const data = await res.json()
-  
   const paths = data.genres.map((genre) => {
     return {
       params: { id: genre.id.toString()}
@@ -32,13 +29,15 @@ export const getStaticProps = async (context) => {
 
 
 const GenresMovies = ({genres, id}) => {
- 
+  
   const movies = genres.results
  
   return (
     <LayoutDetail>
-      <MenuButtonMobile />
-      <Gap className='h-20' />
+      <div className=' fixed z-50 w-full bottom-0 bg-black py-5'>
+        <ColorGenre />
+      </div>
+      <Gap className='h-5' />
       <section className='mx-auto w-full max-w-7xl'>
         <article className='grid md:grid-genres md:gap-5 gap-y-5 grid-cols-2'>
           {movies.map(movie => (
