@@ -1,5 +1,7 @@
+import { useEffect, useContext } from 'react';
 import { Gap, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
 import CONFIG from '../../utils/config/config';
+import { showMenuContext } from '../../utils/config/context';
 import { fetchGenre } from '../../utils/fetch-ssr';
 
 
@@ -23,16 +25,16 @@ export const getStaticProps = async (context) => {
   const genres = await fetchGenre(id)
   return {
     props: {
-      genres
+      genres,id
     }
   }
 }
 
 
-const GenresMovies = ({genres}) => {
-
+const GenresMovies = ({genres, id}) => {
+ 
   const movies = genres.results
-  
+ 
   return (
     <LayoutDetail>
       <MenuButtonMobile />
