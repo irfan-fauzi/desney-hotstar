@@ -1,4 +1,4 @@
-import { ColorGenre, Gap, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
+import { ButtonHome, ColorGenre, Gap, LayoutDetail, MenuButtonMobile, MoviesThumbnail } from '../../components';
 import CONFIG from '../../utils/config/config';
 import { fetchGenre } from '../../utils/fetch-ssr';
 
@@ -34,6 +34,7 @@ const GenresMovies = ({genres, id}) => {
  
   return (
     <LayoutDetail>
+      <ButtonHome />
       <div className=' fixed z-50 w-full bottom-0 bg-black py-5'>
         <ColorGenre />
       </div>
