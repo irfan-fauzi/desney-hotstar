@@ -1,9 +1,9 @@
-import Image from 'next/image'
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import API_ENDPOINT from '../../../utils/config/api-endpoint';
-import CONFIG from '../../../utils/config/config';
+import { search } from '../../../utils/live-search';
+
 
 const Search = () => {
   const [loading, setLoading] = useState(false)
@@ -15,8 +15,8 @@ const Search = () => {
       return false 
     }
     setLoading(true)
-    const response = await axios(API_ENDPOINT.SEARCH_MOVIE(value))
-    const moviesResponse = await response.data.results
+    const response = await search(API_ENDPOINT.SEARCH_MOVIE(value))
+    const moviesResponse = response
     setMovies(moviesResponse)
     setLoading(false)
   }
@@ -25,7 +25,7 @@ const Search = () => {
     searchMovie(e.target.value)
     steValue(e.target.value)
   }
-
+  
   return (
     <div className='relative  flex items-center w-full justify-between'>
       <input 
@@ -38,7 +38,7 @@ const Search = () => {
       <button>
         <BiSearch className='text-3xl lg:text-2xl'/>
       </button>
-      <article className='absolute w-full top-10 left-0 bg-black bg-opacity-20 overflow-auto z-50'>
+      <article className='absolute w-full top-10 left-0 bg-black bg-opacity-90 overflow-auto z-50'>
         {
           value && movies && movies.map((movie) => (
             <div key={movie.id}>
