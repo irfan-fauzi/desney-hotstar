@@ -1,4 +1,4 @@
-import { ButtonHome, ColorGenre, Gap, LayoutDetail, ListSelectedMovies, MenuButtonMobile, MoviesThumbnail } from '../../components';
+import { ButtonHome, ColorGenre, Gap, LayoutDetail, ListSelectedMovies } from '../../components';
 import CONFIG from '../../utils/config/config';
 import { fetchGenre } from '../../utils/fetch-ssr';
 
@@ -32,9 +32,6 @@ export const getStaticProps = async (context) => {
 const GenresMovies = ({genres}) => {
   
   const movies = genres.results
-  
-
-  // 440249 381749 24593 61927
   return (
     <LayoutDetail>
       <ButtonHome />
