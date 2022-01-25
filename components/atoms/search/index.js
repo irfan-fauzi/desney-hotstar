@@ -1,4 +1,4 @@
-import axios from 'axios';
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import API_ENDPOINT from '../../../utils/config/api-endpoint';
@@ -42,7 +42,11 @@ const Search = () => {
         {
           value && movies && movies.map((movie) => (
             <div key={movie.id}>
-              <p>{movie.title}</p>
+              <Link href={`/detail/${movie.id}`}>
+              <a>            
+                <p>{movie.title}</p>
+              </a>
+              </Link>
             </div>
           ))
         }
