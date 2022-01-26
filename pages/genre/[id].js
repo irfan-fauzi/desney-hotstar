@@ -38,7 +38,7 @@ const GenresMovies = ({genres}) => {
       <div className='lg:hidden fixed z-50 w-full bottom-0 bg-black py-5'>
         <ColorGenre />
       </div>
-      <Gap className='h-5' />
+      <Gap className='lg:h-10 h-5' />
       <section className='mx-auto w-full max-w-7xl'>
         <ListSelectedMovies movies={movies} />
       </section>
