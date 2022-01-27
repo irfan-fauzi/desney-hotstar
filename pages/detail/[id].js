@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { fetchDetail, fetchReviews, fetchSimilarMovie } from "../../utils/fetch-ssr"
-import { DetailDesktop, DetailMobile, Gap, LayoutDetail, SkeletonLoading } from '../../components'
+import { DetailDesktop, DetailMobile, LayoutDetail, SkeletonLoading } from '../../components'
 import { MovieContext, PreviewContext, SimilarMovieContext } from "../../utils/config/context"
 import { useRouter } from "next/router"
 
@@ -33,7 +33,6 @@ const Detail = () => {
       componentMounted = false
       setPreview(null)
       setDetailMovie(null)
-      
     }
   },[id])
 

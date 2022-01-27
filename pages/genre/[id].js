@@ -28,7 +28,6 @@ export const getStaticProps = async (context) => {
   }
 }
 
-
 const GenresMovies = ({genres}) => {
   
   const movies = genres.results
