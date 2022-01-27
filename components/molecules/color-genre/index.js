@@ -9,7 +9,10 @@ import {BsPeopleFill} from 'react-icons/bs'
 
 const ColorGenre = () => {
   const router = useRouter()
+  const idGenre = router.query.id
   const [active, setActive] = useState(false)
+  
+
   const settingsLists = {
     dots: false,
     infinite: false,
