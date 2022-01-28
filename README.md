@@ -4,7 +4,7 @@ Aplikasi Web Front end
 
 <p align="center">
 <br>
-   <img src="https://i.ibb.co/RcnqLFc/screencapture-desney-hotstar-vercel-app-2022-01-26-12-19-35.png" border="0" width="550">
+   <img src="https://i.ibb.co/njxSSJ4/Group-2.png" border="0" width="350">
 </p>
 
 ## Setup
