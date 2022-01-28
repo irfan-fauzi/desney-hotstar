@@ -4,7 +4,7 @@ Aplikasi Web Front end
 
 <p align="center">
 <br>
-   <img src="https://i.ibb.co/njxSSJ4/Group-2.png" border="0" width="350">
+   <img src="https://i.ibb.co/njxSSJ4/Group-2.png" border="0" width="450">
 </p>
 
 ## Setup
