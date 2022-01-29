@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import API_ENDPOINT from '../../../utils/config/api-endpoint';
 import { search } from '../../../utils/live-search';
