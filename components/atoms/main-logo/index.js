@@ -5,7 +5,7 @@ const MainLogo = () => {
   return (
     <Link href={`/`}>
       <a>
-        <img src="/assets/images/logo.svg" className='w-[150px]' alt='logo' />
+        <img src="/assets/images/logo.png" className='w-[150px]' alt='logo' />
       </a>
     </Link>
   )
