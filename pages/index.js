@@ -42,6 +42,7 @@ export const getStaticProps = async () => {
        upComing,
        drama,
        documentary
-    }
+    },
+    revalidate: 80000,
   }
 }
