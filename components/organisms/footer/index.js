@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='lg:w-4/12 lg:block flex flex-col'>
           <Image src={logo} width={100} height={50} />
           <Gap className='h-5 lg:hidden' />
-          <p className='text-sm lg:text-left text-center'>©2022 Desney dan entitas-entitas terkaitnya. Hak Cipta Dilindungi Undang-undang. © 2022 Entitas-entitas pemberi lisensi Desney, Hak Cipta Dilindungi Undang-undang </p>
+          <p className='text-sm lg:text-left text-center'>©2022 Movie planet dan entitas-entitas terkaitnya. Hak Cipta Dilindungi Undang-undang. © 2022 Entitas-entitas pemberi lisensi, Hak Cipta Dilindungi Undang-undang </p>
         </div>
         <Gap className='h-5 lg:hidden' />
         <div className='flex items-start  lg:items-center lg:flex-row flex-col gap-5'>
