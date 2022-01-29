@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Gap } from '../..'
-import logo from '../../../public/assets/images/logo.svg'
+import logo from '../../../public/assets/images/logo.png'
 import appStore from '../../../public/assets/images/store.png'
 
 const Footer = () => {
