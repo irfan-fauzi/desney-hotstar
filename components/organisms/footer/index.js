@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex item center justify-center lg:justify-start">
             <img src="/assets/images/logo.png" alt='logo' className='w-[150px]' />
           </div>
-          <Gap className='h-5 lg:hidden' />
+          <Gap className='h-5' />
           <p className='text-sm lg:text-left text-center'>©2022 Movie planet dan entitas-entitas terkaitnya. Hak Cipta Dilindungi Undang-undang. © 2022 Entitas-entitas pemberi lisensi, Hak Cipta Dilindungi Undang-undang </p>
         </div>
         <Gap className='h-5 lg:hidden' />
