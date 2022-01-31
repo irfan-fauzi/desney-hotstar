@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='bg-black px-10 py-7 text-white mt-auto'>
       <div className='flex items-center justify-between lg:flex-row flex-col lg:max-w-screen-xl lg:mx-auto'>
         <div className='lg:w-4/12 lg:block flex flex-col'>
-          <img src={logo} alt='logo' className='w-[150px]' />
+          <img src="/assets/images/logo.png" alt='logo' className='w-[150px]' />
           <Gap className='h-5 lg:hidden' />
           <p className='text-sm lg:text-left text-center'>©2022 Movie planet dan entitas-entitas terkaitnya. Hak Cipta Dilindungi Undang-undang. © 2022 Entitas-entitas pemberi lisensi, Hak Cipta Dilindungi Undang-undang </p>
         </div>
