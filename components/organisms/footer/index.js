@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='bg-black px-10 py-7 text-white mt-auto'>
       <div className='flex items-center justify-between lg:flex-row flex-col lg:max-w-screen-xl lg:mx-auto'>
         <div className='lg:w-4/12 lg:block flex flex-col'>
-          <div className="flex item center justify-center">
+          <div className="flex item center justify-center lg:justify-start">
             <img src="/assets/images/logo.png" alt='logo' className='w-[150px]' />
           </div>
           <Gap className='h-5 lg:hidden' />
